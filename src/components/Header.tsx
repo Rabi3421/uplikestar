@@ -69,10 +69,7 @@ export default function Header() {
       >
         {/* Logo */}
         <a href="/" className="flex items-center gap-2.5" aria-label="UpLikeStar Home">
-          <AppLogo size={36} />
-          <span className="font-display text-xl font-800 tracking-tight text-white hidden sm:block">
-            UpLikeStar
-          </span>
+          <AppLogo width={228} height={57} imageClassName="h-[48px] w-auto sm:h-[57px]" />
         </a>
 
         {/* Desktop Links */}

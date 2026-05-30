@@ -84,8 +84,12 @@ export default function Footer() {
         <div className="grid lg:grid-cols-[1.2fr_0.9fr_0.9fr_1fr] gap-10 py-6">
           <div className="space-y-5 max-w-sm">
             <a href="/" aria-label="UpLikeStar home" className="flex items-center gap-3">
-              <AppLogo size={40} />
-              <span className="font-display text-2xl font-800 tracking-tight text-foreground">UpLikeStar</span>
+              <AppLogo
+                src="/assets/images/app_logo_dark.png"
+                width={254}
+                height={64}
+                imageClassName="h-16 w-auto"
+              />
             </a>
 
             <p className="text-muted-foreground text-sm leading-7">

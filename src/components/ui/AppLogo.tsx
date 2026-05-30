@@ -8,7 +8,11 @@ interface AppLogoProps {
   src?: string; // Image source (optional)
   iconName?: string; // Icon name when no image
   size?: number; // Size for icon/image
+  width?: number; // Image width when using a wordmark logo
+  height?: number; // Image height when using a wordmark logo
   className?: string; // Additional classes
+  imageClassName?: string; // Additional image classes
+  alt?: string; // Image alt text
   onClick?: () => void; // Click handler
 }
 
@@ -16,7 +20,11 @@ const AppLogo = memo(function AppLogo({
   src = '/assets/images/app_logo.png',
   iconName = 'SparklesIcon',
   size = 64,
+  width,
+  height,
   className = '',
+  imageClassName = '',
+  alt = 'UpLikeStar logo',
   onClick,
 }: AppLogoProps) {
   // Memoize className calculation
@@ -33,10 +41,10 @@ const AppLogo = memo(function AppLogo({
       {src ? (
         <AppImage
           src={src}
-          alt="Logo" 
-          width={size}
-          height={size}
-          className="flex-shrink-0"
+          alt={alt}
+          width={width || size}
+          height={height || size}
+          className={`flex-shrink-0 ${imageClassName}`.trim()}
           priority={true}
           unoptimized={src.endsWith('.svg')}
         />
