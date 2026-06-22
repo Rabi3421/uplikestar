@@ -18,8 +18,8 @@ const contactInfo = [
   {
     icon: 'EnvelopeIcon',
     label: 'Email',
-    value: 'hello@arntech.in',
-    href: 'mailto:hello@arntech.in',
+    value: 'hello@rnptechsolutions.com',
+    href: 'mailto:hello@rnptechsolutions.com',
   },
   {
     icon: 'ClockIcon',

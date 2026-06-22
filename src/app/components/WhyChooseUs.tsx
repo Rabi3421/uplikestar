@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4">
             <div className="w-8 h-px bg-gradient-to-r from-transparent to-accent" />
-            <span className="text-accent text-xs font-700 uppercase tracking-widest">Why UpLikeStar</span>
+            <span className="text-accent text-xs font-700 uppercase tracking-widest">Why RNP Tech Solutions</span>
             <div className="w-8 h-px bg-gradient-to-l from-transparent to-accent" />
           </div>
           <h2 className="text-4xl md:text-5xl font-800 tracking-tight leading-tight text-white">

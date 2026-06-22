@@ -39,12 +39,12 @@ export const servicePages: ServicePageData[] = [
     title: 'Website Development Company in Noida',
     metaTitle: 'Website Development Company in Noida | Business Website Design & Development',
     metaDescription:
-      'UpLikeStar is a website development company in Noida creating SEO-friendly, mobile-first, high-converting business websites for startups, local brands, and growing companies.',
+      'RNP Tech Solutions is a website development company in Noida creating SEO-friendly, mobile-first, high-converting business websites for startups, local brands, and growing companies.',
     heroTitle: 'Website Development Company in Noida for Growth-Focused Businesses',
     heroSubtitle:
       'We design and develop fast, SEO-ready, mobile-first websites that build credibility, generate leads, and support long-term digital growth.',
     intro:
-      'UpLikeStar builds business websites that combine strong design, clean development, search-friendly structure, and conversion-focused user journeys. Whether you need a corporate website, service website, landing page system, or a scalable web presence for your brand, we create websites that perform for both users and search engines.',
+      'RNP Tech Solutions builds business websites that combine strong design, clean development, search-friendly structure, and conversion-focused user journeys. Whether you need a corporate website, service website, landing page system, or a scalable web presence for your brand, we create websites that perform for both users and search engines.',
     primaryKeyword: 'website development company in Noida',
     secondaryKeywords: [
       'business website development company',
@@ -93,12 +93,12 @@ export const servicePages: ServicePageData[] = [
     title: 'Custom Software Development Company in India',
     metaTitle: 'Custom Software Development Company in India | Tailored Business Software',
     metaDescription:
-      'UpLikeStar builds tailored business software, internal tools, web applications, ERP modules, and scalable digital systems for startups and growing companies across India.',
+      'RNP Tech Solutions builds tailored business software, internal tools, web applications, ERP modules, and scalable digital systems for startups and growing companies across India.',
     heroTitle: 'Custom Software Development for Businesses That Need More Than Off-the-Shelf Tools',
     heroSubtitle:
       'We create tailored software that matches your workflow, reduces manual effort, and gives your team the exact tools needed to operate efficiently and scale confidently.',
     intro:
-      'Our custom software development services are built for companies that need systems tailored to their processes, users, and business rules. From internal dashboards and workflow systems to client portals and operations platforms, UpLikeStar develops software that solves real operational challenges with reliability and long-term flexibility.',
+      'Our custom software development services are built for companies that need systems tailored to their processes, users, and business rules. From internal dashboards and workflow systems to client portals and operations platforms, RNP Tech Solutions develops software that solves real operational challenges with reliability and long-term flexibility.',
     primaryKeyword: 'custom software development company India',
     secondaryKeywords: [
       'business software development company',
@@ -147,12 +147,12 @@ export const servicePages: ServicePageData[] = [
     title: 'Inventory Management Software Company',
     metaTitle: 'Inventory Management Software Company | Custom Inventory Systems for Businesses',
     metaDescription:
-      'UpLikeStar builds custom inventory management systems with stock tracking, warehouse visibility, purchase records, sales insights, and business reporting.',
+      'RNP Tech Solutions builds custom inventory management systems with stock tracking, warehouse visibility, purchase records, sales insights, and business reporting.',
     heroTitle: 'Inventory Management Systems That Reduce Errors and Improve Control',
     heroSubtitle:
       'We develop inventory software for businesses that need real-time stock visibility, smarter purchasing decisions, faster reporting, and fewer operational mistakes.',
     intro:
-      'UpLikeStar creates inventory management systems for businesses that need accurate stock control, streamlined warehouse operations, and better visibility across products, vendors, and sales movement. Our solutions support operational clarity for growing businesses moving beyond manual inventory management.',
+      'RNP Tech Solutions creates inventory management systems for businesses that need accurate stock control, streamlined warehouse operations, and better visibility across products, vendors, and sales movement. Our solutions support operational clarity for growing businesses moving beyond manual inventory management.',
     primaryKeyword: 'inventory management software company',
     secondaryKeywords: [
       'custom inventory management system',
@@ -201,12 +201,12 @@ export const servicePages: ServicePageData[] = [
     title: 'Business Automation Services in India',
     metaTitle: 'Business Automation Services in India | Workflow Automation Solutions',
     metaDescription:
-      'UpLikeStar provides business automation services to streamline approvals, operations, reporting, notifications, and repetitive workflows for growing businesses.',
+      'RNP Tech Solutions provides business automation services to streamline approvals, operations, reporting, notifications, and repetitive workflows for growing businesses.',
     heroTitle: 'Business Automation Services for Faster, Smarter Operations',
     heroSubtitle:
       'We automate repetitive tasks, connect systems, and reduce delays so your team can focus on high-value work instead of manual coordination.',
     intro:
-      'Our business automation services help companies reduce manual effort, improve accuracy, and speed up operations across departments. From approvals and notifications to data syncing and scheduled tasks, UpLikeStar builds automation systems that improve efficiency and support digital transformation.',
+      'Our business automation services help companies reduce manual effort, improve accuracy, and speed up operations across departments. From approvals and notifications to data syncing and scheduled tasks, RNP Tech Solutions builds automation systems that improve efficiency and support digital transformation.',
     primaryKeyword: 'business automation services India',
     secondaryKeywords: [
       'workflow automation solutions',
@@ -255,12 +255,12 @@ export const servicePages: ServicePageData[] = [
     title: 'ERP and CRM Development Company in India',
     metaTitle: 'ERP and CRM Development Company in India | Custom ERP CRM Solutions',
     metaDescription:
-      'UpLikeStar builds ERP and CRM solutions for sales, finance, procurement, service, HR, and operational visibility across growing businesses.',
+      'RNP Tech Solutions builds ERP and CRM solutions for sales, finance, procurement, service, HR, and operational visibility across growing businesses.',
     heroTitle: 'ERP and CRM Solutions for Businesses That Need One Connected Operating System',
     heroSubtitle:
       'We develop tailored ERP and CRM platforms that centralize sales, operations, finance, service, and reporting so your team can work with clarity and control.',
     intro:
-      'UpLikeStar builds ERP and CRM systems for businesses that need centralized data, stronger process control, and better team coordination. From lead tracking and customer management to procurement, billing, service workflows, and internal reporting, our solutions are designed to fit your business structure rather than forcing you into generic software limitations.',
+      'RNP Tech Solutions builds ERP and CRM systems for businesses that need centralized data, stronger process control, and better team coordination. From lead tracking and customer management to procurement, billing, service workflows, and internal reporting, our solutions are designed to fit your business structure rather than forcing you into generic software limitations.',
     primaryKeyword: 'ERP CRM development company India',
     secondaryKeywords: [
       'custom ERP development company',
@@ -309,12 +309,12 @@ export const servicePages: ServicePageData[] = [
     title: 'E-commerce Website Development Company in India',
     metaTitle: 'E-commerce Website Development Company in India | Custom Online Store Development',
     metaDescription:
-      'UpLikeStar develops e-commerce websites and custom online store platforms with catalog management, payments, admin dashboards, and scalable user experiences.',
+      'RNP Tech Solutions develops e-commerce websites and custom online store platforms with catalog management, payments, admin dashboards, and scalable user experiences.',
     heroTitle: 'E-commerce Website Development for Brands Ready to Sell and Scale Online',
     heroSubtitle:
       'We build custom online stores and e-commerce platforms that combine great shopping experiences, reliable operations, and strong business visibility.',
     intro:
-      'UpLikeStar develops e-commerce websites for businesses that want better control over product catalogs, checkout flows, order management, customer experience, and digital growth. Whether you are launching a new brand or modernizing an existing store, we create scalable e-commerce systems designed around performance, usability, and conversions.',
+      'RNP Tech Solutions develops e-commerce websites for businesses that want better control over product catalogs, checkout flows, order management, customer experience, and digital growth. Whether you are launching a new brand or modernizing an existing store, we create scalable e-commerce systems designed around performance, usability, and conversions.',
     primaryKeyword: 'ecommerce website development company India',
     secondaryKeywords: [
       'custom ecommerce development company',

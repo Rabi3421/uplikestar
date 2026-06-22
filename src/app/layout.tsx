@@ -55,7 +55,7 @@ export const metadata: Metadata = {
         url: siteConfig.ogImage,
         width: 1536,
         height: 1536,
-        alt: 'UpLikeStar digital solutions workspace',
+        alt: 'RNP Tech Solutions digital solutions workspace',
       },
     ],
   },
@@ -67,12 +67,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=3', type: 'image/x-icon', sizes: 'any' },
-      { url: '/assets/images/favicon-192.png?v=3', type: 'image/png', sizes: '192x192' },
-      { url: '/assets/images/favicon-512.png?v=3', type: 'image/png', sizes: '512x512' },
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/assets/images/favicon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/assets/images/favicon-512.png', type: 'image/png', sizes: '512x512' },
     ],
-    shortcut: [{ url: '/favicon.ico?v=3', type: 'image/x-icon' }],
-    apple: [{ url: '/assets/images/apple-touch-icon.png?v=3', type: 'image/png', sizes: '180x180' }],
+    shortcut: [{ url: '/favicon.ico' }],
+    apple: [{ url: '/assets/images/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }],
   },
 };
 
@@ -96,7 +96,7 @@ export default function RootLayout({
           }}
         />
 
-        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Farntech2165back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.18" />
+        <script type="module" async src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Frnptechsolutions2165back.builtwithrocket.new&_be=https%3A%2F%2Fappanalytics.rocket.new&_v=0.1.18" />
         <script type="module" defer src="https://static.rocket.new/rocket-shot.js?v=0.0.2" /></body>
     </html>
   );

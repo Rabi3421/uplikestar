@@ -16,7 +16,7 @@ export default function AboutSection() {
         {/* Section label */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-8 h-px bg-gradient-to-r from-primary to-accent" />
-          <span className="text-muted-foreground text-xs font-700 uppercase tracking-widest">About UpLikeStar</span>
+          <span className="text-muted-foreground text-xs font-700 uppercase tracking-widest">About RNP Tech Solutions</span>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -63,7 +63,7 @@ export default function AboutSection() {
                 <span className="text-gradient-primary">Digital Transformation</span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                UpLikeStar is a technology company helping businesses move from
+                RNP Tech Solutions is a technology company helping businesses move from
                 manual operations to efficient, digitally managed systems. We combine software expertise,
                 business understanding, and practical execution to deliver measurable results.
               </p>

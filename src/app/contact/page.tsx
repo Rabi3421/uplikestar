@@ -9,9 +9,9 @@ import { servicePages } from '@/app/services/servicePages';
 import { siteConfig, siteUrl } from '@/app/seo';
 
 export const metadata: Metadata = {
-  title: 'Contact UpLikeStar | Software, Website and Automation Consultation',
+  title: 'Contact RNP Tech Solutions | Software, Website and Automation Consultation',
   description:
-    'Contact UpLikeStar for website development, custom software, ERP CRM solutions, inventory systems, e-commerce development, and business automation consultation.',
+    'Contact RNP Tech Solutions for website development, custom software, ERP CRM solutions, inventory systems, e-commerce development, and business automation consultation.',
   keywords: [
     'contact software development company',
     'contact website development company Noida',
@@ -22,15 +22,15 @@ export const metadata: Metadata = {
     canonical: '/contact',
   },
   openGraph: {
-    title: 'Contact UpLikeStar',
+    title: 'Contact RNP Tech Solutions',
     description:
-      'Speak with UpLikeStar about custom software, websites, ERP CRM systems, inventory management, e-commerce, and automation solutions.',
+      'Speak with RNP Tech Solutions about custom software, websites, ERP CRM systems, inventory management, e-commerce, and automation solutions.',
     url: `${siteUrl}/contact`,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact UpLikeStar',
+    title: 'Contact RNP Tech Solutions',
     description:
       'Book a consultation for software development, websites, ERP CRM, inventory systems, e-commerce, and automation.',
     images: [siteConfig.ogImage],
@@ -43,10 +43,10 @@ export default function ContactPage() {
     '@graph': [
       {
         '@type': 'ContactPage',
-        name: 'Contact UpLikeStar',
+        name: 'Contact RNP Tech Solutions',
         url: `${siteUrl}/contact`,
         description:
-          'Contact UpLikeStar for software development, website development, ERP CRM solutions, e-commerce, inventory systems, and business automation services.',
+          'Contact RNP Tech Solutions for software development, website development, ERP CRM solutions, e-commerce, inventory systems, and business automation services.',
       },
       {
         '@type': 'Organization',
@@ -74,10 +74,10 @@ export default function ContactPage() {
           <div className="max-w-4xl">
             <div className="inline-flex items-center gap-2 glass-card rounded-full px-4 py-2 mb-8">
               <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-accent text-xs font-700 uppercase tracking-widest">Contact UpLikeStar</span>
+              <span className="text-accent text-xs font-700 uppercase tracking-widest">Contact RNP Tech Solutions</span>
             </div>
             <h1 className="text-[clamp(2.5rem,6vw,4.8rem)] font-800 leading-[1.05] tracking-tight text-white mb-6">
-              Talk to UpLikeStar About Software, Websites, ERP, E-commerce, and Automation
+              Talk to RNP Tech Solutions About Software, Websites, ERP, E-commerce, and Automation
             </h1>
             <p className="text-lg md:text-xl text-white/65 leading-relaxed max-w-3xl mb-10">
               Share your business goals, current bottlenecks, or project scope. We will guide you toward the most practical digital solution and respond with a tailored plan.
@@ -110,7 +110,7 @@ export default function ContactPage() {
               A Clear Starting Point for Your Next Digital Project
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Whether you need a website development company in Noida, a custom software development partner, an ERP CRM solution, an inventory management system, an e-commerce platform, or business automation services, UpLikeStar helps you define the right scope before development begins.
+              Whether you need a website development company in Noida, a custom software development partner, an ERP CRM solution, an inventory management system, an e-commerce platform, or business automation services, RNP Tech Solutions helps you define the right scope before development begins.
             </p>
           </div>
           <div className="bg-card border border-border rounded-3xl p-8 shadow-sm">

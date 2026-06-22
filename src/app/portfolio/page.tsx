@@ -7,24 +7,24 @@ import PortfolioSection from '@/app/components/PortfolioSection';
 import { siteConfig, siteUrl } from '@/app/seo';
 
 export const metadata: Metadata = {
-  title: 'Portfolio | UpLikeStar',
+  title: 'Portfolio | RNP Tech Solutions',
   description:
-    'View UpLikeStar portfolio projects across website development, custom software, inventory systems, e-commerce, and business intelligence solutions.',
+    'View RNP Tech Solutions portfolio projects across website development, custom software, inventory systems, e-commerce, and business intelligence solutions.',
   alternates: {
     canonical: '/portfolio',
   },
   openGraph: {
-    title: 'Portfolio | UpLikeStar',
+    title: 'Portfolio | RNP Tech Solutions',
     description:
-      'View UpLikeStar portfolio projects across website development, custom software, inventory systems, e-commerce, and business intelligence solutions.',
+      'View RNP Tech Solutions portfolio projects across website development, custom software, inventory systems, e-commerce, and business intelligence solutions.',
     url: `${siteUrl}/portfolio`,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Portfolio | UpLikeStar',
+    title: 'Portfolio | RNP Tech Solutions',
     description:
-      'View UpLikeStar portfolio projects across website development, custom software, inventory systems, e-commerce, and business intelligence solutions.',
+      'View RNP Tech Solutions portfolio projects across website development, custom software, inventory systems, e-commerce, and business intelligence solutions.',
     images: [siteConfig.ogImage],
   },
 };
@@ -33,10 +33,10 @@ export default function PortfolioPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'UpLikeStar Portfolio',
+    name: 'RNP Tech Solutions Portfolio',
     url: `${siteUrl}/portfolio`,
     description:
-      'Portfolio page showcasing website, software, inventory, e-commerce, and dashboard projects by UpLikeStar.',
+      'Portfolio page showcasing website, software, inventory, e-commerce, and dashboard projects by RNP Tech Solutions.',
   };
 
   return (

@@ -33,7 +33,7 @@ export default function SEOContentSection() {
 
             <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                UpLikeStar is a software development company in Noida helping businesses adopt smart,
+                RNP Tech Solutions is a software development company in Noida helping businesses adopt smart,
                 affordable, and customized digital solutions. We work with startups, local businesses, and established
                 companies that need reliable technology to improve productivity, streamline operations, and scale sustainably.
               </p>
@@ -44,7 +44,7 @@ export default function SEOContentSection() {
               </p>
               <p>
                 If you are searching for a website development company in Noida, a custom software development company in
-                India, or a trusted partner for business automation services, UpLikeStar provides strategy, design,
+                India, or a trusted partner for business automation services, RNP Tech Solutions provides strategy, design,
                 development, deployment, and long-term support under one roof.
               </p>
             </div>

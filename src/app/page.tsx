@@ -15,25 +15,25 @@ import SEOContentSection from '@/app/components/SEOContentSection';
 import { faqItems, siteConfig, siteUrl, targetKeywords } from '@/app/seo';
 
 export const metadata: Metadata = {
-  title: 'Software Development Company in Noida for Websites, Automation and Business Software',
+  title: 'RNP Tech Solutions | Websites, Software, Dashboards & Business Automation',
   description:
-    'UpLikeStar is a software development company in Noida offering custom software, website development, inventory management systems, ERP/CRM solutions, and business automation services.',
+    'RNP Tech Solutions builds websites, custom software, dashboards, inventory/ERP systems, CRM solutions and business automation for growing businesses.',
   keywords: targetKeywords,
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Software Development Company in Noida | UpLikeStar',
+    title: 'RNP Tech Solutions | Websites, Software, Dashboards & Business Automation',
     description:
-      'Explore custom software development, website development, inventory systems, ERP/CRM platforms, and business automation solutions for growing businesses.',
+      'RNP Tech Solutions builds websites, custom software, dashboards, inventory/ERP systems, CRM solutions and business automation for growing businesses.',
     url: siteUrl,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Software Development Company in Noida | UpLikeStar',
+    title: 'RNP Tech Solutions | Websites, Software, Dashboards & Business Automation',
     description:
-      'Custom software, business websites, inventory systems, ERP/CRM, and automation solutions for modern businesses.',
+      'RNP Tech Solutions builds websites, custom software, dashboards, inventory/ERP systems, CRM solutions and business automation for growing businesses.',
     images: [siteConfig.ogImage],
   },
 };
@@ -44,7 +44,7 @@ export default function HomePage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        name: 'UpLikeStar - Software Development Company in Noida',
+        name: 'RNP Tech Solutions - Software Development Company in Noida',
         url: siteUrl,
         description: siteConfig.shortDescription,
         isPartOf: {

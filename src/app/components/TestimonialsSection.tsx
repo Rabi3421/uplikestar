@@ -9,7 +9,7 @@ const testimonials = [
   company: 'MegaMart Retail Group, Mumbai',
   avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_1f3173f12-1776525342722.png",
   review:
-  'UpLikeStar delivered our multi-vendor platform in under 3 months — exactly what we envisioned. The team understood our business deeply and the quality is outstanding. We have doubled our vendor base since launch.',
+  'RNP Tech Solutions delivered our multi-vendor platform in under 3 months — exactly what we envisioned. The team understood our business deeply and the quality is outstanding. We have doubled our vendor base since launch.',
   rating: 5,
   project: 'E-commerce Platform'
 },
@@ -19,7 +19,7 @@ const testimonials = [
   company: 'NexGen HR Solutions, Bangalore',
   avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_19bc93ee4-1765276247228.png",
   review:
-  'The admin dashboard they built for us handles 50,000+ employee records flawlessly. The UI is so clean that our clients are genuinely impressed. UpLikeStar is now our permanent technology partner.',
+  'The admin dashboard they built for us handles 50,000+ employee records flawlessly. The UI is so clean that our clients are genuinely impressed. RNP Tech Solutions is now our permanent technology partner.',
   rating: 5,
   project: 'Admin Dashboard'
 },
@@ -29,7 +29,7 @@ const testimonials = [
   company: 'ShriVastu FMCG Distributors, Delhi',
   avatar: "https://img.rocket.new/generatedImages/rocket_gen_img_12fe9bac0-1769183759635.png",
   review:
-  'Our inventory system was a chaos before UpLikeStar. Now we have real-time visibility across 4 warehouses. Stock discrepancies dropped by 87%. Best investment we have made in the last 5 years.',
+  'Our inventory system was a chaos before RNP Tech Solutions. Now we have real-time visibility across 4 warehouses. Stock discrepancies dropped by 87%. Best investment we have made in the last 5 years.',
   rating: 5,
   project: 'Inventory Management'
 }];

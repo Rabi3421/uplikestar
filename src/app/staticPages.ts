@@ -34,16 +34,16 @@ export const staticPages: StaticPageData[] = [
   {
     slug: 'about',
     path: '/about',
-    title: 'About UpLikeStar',
-    metaTitle: 'About UpLikeStar | Software and Digital Transformation Company',
+    title: 'About RNP Tech Solutions',
+    metaTitle: 'About RNP Tech Solutions | Software and Digital Transformation Company',
     metaDescription:
-      'Learn about UpLikeStar, a Noida-based technology company delivering software development, website development, inventory systems, ERP CRM solutions, and business automation.',
-    eyebrow: 'About UpLikeStar',
+      'Learn about RNP Tech Solutions, a Noida-based technology company delivering software development, website development, inventory systems, ERP CRM solutions, and business automation.',
+    eyebrow: 'About RNP Tech Solutions',
     heroTitle: 'A Technology Partner Focused on Practical Digital Growth',
     heroSubtitle:
-      'UpLikeStar helps businesses modernize with custom software, websites, inventory systems, ERP CRM platforms, e-commerce solutions, and business automation services.',
+      'RNP Tech Solutions helps businesses modernize with custom software, websites, inventory systems, ERP CRM platforms, e-commerce solutions, and business automation services.',
     intro:
-      'UpLikeStar is an innovative technology company focused on delivering smart, affordable, and customized digital solutions for businesses of all sizes. We work with traditional businesses, startups, and growing enterprises that want reliable technology partners capable of solving real operational problems.',
+      'RNP Tech Solutions is an innovative technology company focused on delivering smart, affordable, and customized digital solutions for businesses of all sizes. We work with traditional businesses, startups, and growing enterprises that want reliable technology partners capable of solving real operational problems.',
     sections: [
       {
         title: 'What We Do',
@@ -62,7 +62,7 @@ export const staticPages: StaticPageData[] = [
       {
         title: 'Who We Work With',
         paragraphs: [
-          'UpLikeStar works with companies that want to improve efficiency, digitize traditional processes, and build stronger operating systems for the future. Our solutions are especially valuable for businesses moving away from spreadsheets, fragmented tools, and manual coordination.',
+          'RNP Tech Solutions works with companies that want to improve efficiency, digitize traditional processes, and build stronger operating systems for the future. Our solutions are especially valuable for businesses moving away from spreadsheets, fragmented tools, and manual coordination.',
           'We support local businesses, service companies, distributors, operational teams, and growth-stage organizations that need dependable digital systems backed by long-term support.',
         ],
       },
@@ -79,15 +79,15 @@ export const staticPages: StaticPageData[] = [
     slug: 'privacy-policy',
     path: '/privacy-policy',
     title: 'Privacy Policy',
-    metaTitle: 'Privacy Policy | UpLikeStar',
+    metaTitle: 'Privacy Policy | RNP Tech Solutions',
     metaDescription:
-      'Read the UpLikeStar privacy policy to understand how we collect, use, protect, and manage information shared through our website and business enquiries.',
+      'Read the RNP Tech Solutions privacy policy to understand how we collect, use, protect, and manage information shared through our website and business enquiries.',
     eyebrow: 'Privacy Policy',
-    heroTitle: 'How UpLikeStar Handles Information Shared Through This Website',
+    heroTitle: 'How RNP Tech Solutions Handles Information Shared Through This Website',
     heroSubtitle:
-      'This privacy policy explains what information we may collect, how we use it, and the steps we take to protect the data shared with UpLikeStar.',
+      'This privacy policy explains what information we may collect, how we use it, and the steps we take to protect the data shared with RNP Tech Solutions.',
     intro:
-      'UpLikeStar respects your privacy and is committed to protecting the information you share with us. This page outlines the general principles we follow when handling enquiries, contact details, and website usage information.',
+      'RNP Tech Solutions respects your privacy and is committed to protecting the information you share with us. This page outlines the general principles we follow when handling enquiries, contact details, and website usage information.',
     sections: [
       {
         title: 'Information We May Collect',
@@ -110,14 +110,14 @@ export const staticPages: StaticPageData[] = [
       {
         title: 'Data Protection and Sharing',
         paragraphs: [
-          'UpLikeStar takes reasonable measures to protect personal information from unauthorized access, misuse, or disclosure. We do not sell personal information. Information may be shared only when required for operational, legal, or service-delivery reasons.',
+          'RNP Tech Solutions takes reasonable measures to protect personal information from unauthorized access, misuse, or disclosure. We do not sell personal information. Information may be shared only when required for operational, legal, or service-delivery reasons.',
           'If third-party tools are used for analytics, hosting, or communication, those tools may process limited data as part of their service functions.',
         ],
       },
       {
         title: 'Your Choices',
         paragraphs: [
-          'You may contact UpLikeStar to request clarification about the information you have shared with us or to ask for updates or deletion where reasonably applicable.',
+          'You may contact RNP Tech Solutions to request clarification about the information you have shared with us or to ask for updates or deletion where reasonably applicable.',
         ],
       },
     ],
@@ -126,26 +126,26 @@ export const staticPages: StaticPageData[] = [
     slug: 'terms-and-conditions',
     path: '/terms-and-conditions',
     title: 'Terms and Conditions',
-    metaTitle: 'Terms and Conditions | UpLikeStar',
+    metaTitle: 'Terms and Conditions | RNP Tech Solutions',
     metaDescription:
-      'Read the UpLikeStar terms and conditions covering website use, enquiries, intellectual property, service discussions, and general limitations.',
+      'Read the RNP Tech Solutions terms and conditions covering website use, enquiries, intellectual property, service discussions, and general limitations.',
     eyebrow: 'Terms and Conditions',
-    heroTitle: 'Terms for Using the UpLikeStar Website and Interacting With Our Team',
+    heroTitle: 'Terms for Using the RNP Tech Solutions Website and Interacting With Our Team',
     heroSubtitle:
-      'These terms outline the general conditions that apply when using the UpLikeStar website or engaging with us regarding our services.',
+      'These terms outline the general conditions that apply when using the RNP Tech Solutions website or engaging with us regarding our services.',
     intro:
-      'By accessing this website or contacting UpLikeStar through it, you agree to use the site and its content in a lawful and responsible manner. These terms provide a general framework for website use and early-stage business communication.',
+      'By accessing this website or contacting RNP Tech Solutions through it, you agree to use the site and its content in a lawful and responsible manner. These terms provide a general framework for website use and early-stage business communication.',
     sections: [
       {
         title: 'Website Use',
         paragraphs: [
-          'The content on this website is provided for general information about UpLikeStar, our services, and our business profile. You agree not to misuse the website, attempt unauthorized access, or use the content in a way that harms the site or the company.',
+          'The content on this website is provided for general information about RNP Tech Solutions, our services, and our business profile. You agree not to misuse the website, attempt unauthorized access, or use the content in a way that harms the site or the company.',
         ],
       },
       {
         title: 'Intellectual Property',
         paragraphs: [
-          'Website content, branding, design elements, and published materials on this website are owned by or used by UpLikeStar unless otherwise stated. They may not be copied, reused, or redistributed without proper permission.',
+          'Website content, branding, design elements, and published materials on this website are owned by or used by RNP Tech Solutions unless otherwise stated. They may not be copied, reused, or redistributed without proper permission.',
         ],
       },
       {
@@ -157,7 +157,7 @@ export const staticPages: StaticPageData[] = [
       {
         title: 'Limitations',
         paragraphs: [
-          'UpLikeStar aims to keep the website accurate and up to date, but we do not guarantee that all information will always remain complete, current, or error-free. The website content should not be interpreted as binding business, legal, or technical advice.',
+          'RNP Tech Solutions aims to keep the website accurate and up to date, but we do not guarantee that all information will always remain complete, current, or error-free. The website content should not be interpreted as binding business, legal, or technical advice.',
         ],
       },
       {
@@ -172,15 +172,15 @@ export const staticPages: StaticPageData[] = [
     slug: 'case-studies',
     path: '/case-studies',
     title: 'Case Studies',
-    metaTitle: 'Case Studies | UpLikeStar',
+    metaTitle: 'Case Studies | RNP Tech Solutions',
     metaDescription:
-      'Explore UpLikeStar case studies across websites, software, ERP CRM systems, inventory management, e-commerce, and automation projects for growing businesses.',
+      'Explore RNP Tech Solutions case studies across websites, software, ERP CRM systems, inventory management, e-commerce, and automation projects for growing businesses.',
     eyebrow: 'Case Studies',
-    heroTitle: 'How UpLikeStar Builds Measurable Digital Outcomes',
+    heroTitle: 'How RNP Tech Solutions Builds Measurable Digital Outcomes',
     heroSubtitle:
       'Our case study approach focuses on solving operational bottlenecks, improving visibility, and delivering digital systems that create lasting business value.',
     intro:
-      'UpLikeStar works on business-critical digital solutions where the goal is not just launch, but measurable operational improvement. Our case studies represent the types of problems we solve through software development, website development, ERP CRM implementation, inventory systems, e-commerce platforms, and workflow automation.',
+      'RNP Tech Solutions works on business-critical digital solutions where the goal is not just launch, but measurable operational improvement. Our case studies represent the types of problems we solve through software development, website development, ERP CRM implementation, inventory systems, e-commerce platforms, and workflow automation.',
     sections: [
       {
         title: 'Custom Software and Internal Tools',
@@ -214,15 +214,15 @@ export const staticPages: StaticPageData[] = [
     slug: 'industries',
     path: '/industries',
     title: 'Industries We Serve',
-    metaTitle: 'Industries We Serve | UpLikeStar',
+    metaTitle: 'Industries We Serve | RNP Tech Solutions',
     metaDescription:
-      'Discover how UpLikeStar supports industries including retail, distribution, professional services, healthcare, education, manufacturing, and growth-stage businesses with tailored digital solutions.',
+      'Discover how RNP Tech Solutions supports industries including retail, distribution, professional services, healthcare, education, manufacturing, and growth-stage businesses with tailored digital solutions.',
     eyebrow: 'Industries',
     heroTitle: 'Digital Solutions Tailored to Real Industry Workflows',
     heroSubtitle:
-      'UpLikeStar adapts software, website, inventory, ERP CRM, e-commerce, and automation systems to the operational realities of each business environment.',
+      'RNP Tech Solutions adapts software, website, inventory, ERP CRM, e-commerce, and automation systems to the operational realities of each business environment.',
     intro:
-      'Every industry has different workflows, compliance needs, customer journeys, and operational bottlenecks. UpLikeStar builds digital systems that fit these realities so businesses can modernize without forcing teams into unsuitable software patterns.',
+      'Every industry has different workflows, compliance needs, customer journeys, and operational bottlenecks. RNP Tech Solutions builds digital systems that fit these realities so businesses can modernize without forcing teams into unsuitable software patterns.',
     sections: [
       {
         title: 'Retail, Distribution, and Inventory-Heavy Businesses',
@@ -254,15 +254,15 @@ export const staticPages: StaticPageData[] = [
     slug: 'faq',
     path: '/faq',
     title: 'Frequently Asked Questions',
-    metaTitle: 'FAQ | UpLikeStar',
+    metaTitle: 'FAQ | RNP Tech Solutions',
     metaDescription:
-      'Get answers to common questions about UpLikeStar, including software development, website development, ERP CRM, inventory systems, e-commerce, and business automation services.',
+      'Get answers to common questions about RNP Tech Solutions, including software development, website development, ERP CRM, inventory systems, e-commerce, and business automation services.',
     eyebrow: 'FAQ Hub',
-    heroTitle: 'Common Questions About UpLikeStar and Our Digital Services',
+    heroTitle: 'Common Questions About RNP Tech Solutions and Our Digital Services',
     heroSubtitle:
       'This page answers frequent questions about our capabilities, engagement approach, and the types of digital systems we build for growing businesses.',
     intro:
-      'Businesses often approach UpLikeStar with similar questions about scope, customization, industry fit, and long-term support. This FAQ hub brings together the most common topics to help you understand how we approach software, websites, ERP CRM solutions, inventory systems, e-commerce, and automation projects.',
+      'Businesses often approach RNP Tech Solutions with similar questions about scope, customization, industry fit, and long-term support. This FAQ hub brings together the most common topics to help you understand how we approach software, websites, ERP CRM solutions, inventory systems, e-commerce, and automation projects.',
     sections: [
       {
         title: 'What You Can Expect',

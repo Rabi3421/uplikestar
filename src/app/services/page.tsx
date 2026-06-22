@@ -8,24 +8,24 @@ import SEOContentSection from '@/app/components/SEOContentSection';
 import { siteConfig, siteUrl } from '@/app/seo';
 
 export const metadata: Metadata = {
-  title: 'Services | UpLikeStar',
+  title: 'Services | RNP Tech Solutions',
   description:
-    'Explore UpLikeStar services including website development, custom software development, inventory systems, ERP CRM solutions, e-commerce development, and business automation.',
+    'Explore RNP Tech Solutions services including website development, custom software development, inventory systems, ERP CRM solutions, e-commerce development, and business automation.',
   alternates: {
     canonical: '/services',
   },
   openGraph: {
-    title: 'Services | UpLikeStar',
+    title: 'Services | RNP Tech Solutions',
     description:
-      'Explore website development, custom software, inventory systems, ERP CRM, e-commerce, and automation services from UpLikeStar.',
+      'Explore website development, custom software, inventory systems, ERP CRM, e-commerce, and automation services from RNP Tech Solutions.',
     url: `${siteUrl}/services`,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Services | UpLikeStar',
+    title: 'Services | RNP Tech Solutions',
     description:
-      'Explore website development, custom software, inventory systems, ERP CRM, e-commerce, and automation services from UpLikeStar.',
+      'Explore website development, custom software, inventory systems, ERP CRM, e-commerce, and automation services from RNP Tech Solutions.',
     images: [siteConfig.ogImage],
   },
 };
@@ -34,10 +34,10 @@ export default function ServicesPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'UpLikeStar',
+    name: 'RNP Tech Solutions',
     url: `${siteUrl}/services`,
     description:
-      'Service overview page for UpLikeStar covering websites, custom software, ERP CRM, e-commerce, inventory systems, and automation.',
+      'Service overview page for RNP Tech Solutions covering websites, custom software, ERP CRM, e-commerce, inventory systems, and automation.',
   };
 
   return (
@@ -58,7 +58,7 @@ export default function ServicesPage() {
             </h1>
             <p className="text-lg md:text-xl text-white/65 leading-relaxed max-w-3xl">
               Explore dedicated service pages for website development, custom software, inventory systems, ERP CRM,
-              e-commerce, and business automation solutions from UpLikeStar.
+              e-commerce, and business automation solutions from RNP Tech Solutions.
             </p>
           </div>
         </div>

@@ -94,20 +94,8 @@ export default function AnimationProvider() {
     );
     countEls.forEach((el) => countObserver.observe(el));
 
-    // Nav scroll behavior
-    const nav = document.querySelector('#main-nav') as HTMLElement;
-    const onScroll = () => {
-      if (window.scrollY > 60) {
-        nav?.classList.add('nav-scrolled');
-      } else {
-        nav?.classList.remove('nav-scrolled');
-      }
-    };
-    window.addEventListener('scroll', onScroll, { passive: true });
-
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
-      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 

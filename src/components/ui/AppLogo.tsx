@@ -17,14 +17,14 @@ interface AppLogoProps {
 }
 
 const AppLogo = memo(function AppLogo({
-  src = '/assets/images/app_logo.png',
+  src = '/assets/images/logo.png',
   iconName = 'SparklesIcon',
   size = 64,
-  width,
-  height,
+  width = 200,
+  height = 50,
   className = '',
   imageClassName = '',
-  alt = 'UpLikeStar logo',
+  alt = 'RNP Tech Solutions logo',
   onClick,
 }: AppLogoProps) {
   // Memoize className calculation
@@ -47,6 +47,7 @@ const AppLogo = memo(function AppLogo({
           className={`flex-shrink-0 ${imageClassName}`.trim()}
           priority={true}
           unoptimized={src.endsWith('.svg')}
+          showLoadingBackground={false}
         />
       ) : (
         <AppIcon name={iconName} size={size} className="flex-shrink-0" />

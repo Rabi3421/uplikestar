@@ -59,7 +59,7 @@ export default function Footer() {
               Need a reliable technology partner for your next project?
             </h2>
             <p className="text-white/70 text-base leading-relaxed">
-              Speak with UpLikeStar about websites, software, ERP CRM platforms, inventory systems,
+              Speak with RNP Tech Solutions about websites, software, ERP CRM platforms, inventory systems,
               e-commerce, and automation solutions tailored to your business.
             </p>
           </div>
@@ -83,17 +83,16 @@ export default function Footer() {
 
         <div className="grid lg:grid-cols-[1.2fr_0.9fr_0.9fr_1fr] gap-10 py-6">
           <div className="space-y-5 max-w-sm">
-            <a href="/" aria-label="UpLikeStar home" className="flex items-center gap-3">
+            <a href="/" aria-label="RNP Tech Solutions home" className="flex items-center gap-3">
               <AppLogo
-                src="/assets/images/app_logo_dark.png"
-                width={254}
-                height={64}
-                imageClassName="h-16 w-auto"
+                width={220}
+                height={55}
+                imageClassName="h-11 w-auto sm:h-12 object-contain"
               />
             </a>
 
             <p className="text-muted-foreground text-sm leading-7">
-              UpLikeStar delivers smart, affordable, and customized digital
+              RNP Tech Solutions delivers smart, affordable, and customized digital
               solutions for businesses that need websites, software, automation, and operational clarity.
             </p>
 
@@ -181,7 +180,7 @@ export default function Footer() {
 
         <div className="border-t border-border mt-8 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
           <p className="text-muted-foreground text-sm leading-relaxed">
-            &copy; 2026 UpLikeStar. All rights reserved.
+            &copy; 2026 RNP Tech Solutions. All rights reserved.
           </p>
 
           <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground">

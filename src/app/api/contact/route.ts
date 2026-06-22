@@ -110,7 +110,7 @@ function getSheetsAuth() {
 }
 
 function getMailer() {
-  const user = process.env.GMAIL_USER || 'arntechsofficial@gmail.com';
+  const user = process.env.GMAIL_USER || 'rnptechsolutionsofficial@gmail.com';
   const pass = process.env.GMAIL_APP_PASSWORD?.replace(/\s+/g, '');
 
   if (!pass) {
@@ -162,10 +162,10 @@ export async function POST(request: Request) {
     const spreadsheetRange = process.env.GOOGLE_SHEETS_RANGE || 'Sheet1!A:H';
 
     const mailer = getMailer();
-    const sender = process.env.GMAIL_USER || 'arntechsofficial@gmail.com';
+    const sender = process.env.GMAIL_USER || 'rnptechsolutionsofficial@gmail.com';
     const recipient = process.env.CONTACT_TO_EMAIL || 'rnpmech.enggr@gmail.com';
 
-    const subject = `New UpLikeStar enquiry from ${name}`;
+    const subject = `New RNP Tech Solutions enquiry from ${name}`;
     const text = [
       `Name: ${name}`,
       `Email: ${email}`,
@@ -177,7 +177,7 @@ export async function POST(request: Request) {
     ].join('\n');
 
     const html = `
-      <h2 style="margin:0 0 16px;font-size:20px;">New UpLikeStar Enquiry</h2>
+      <h2 style="margin:0 0 16px;font-size:20px;">New RNP Tech Solutions Enquiry</h2>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
       <p><strong>Company:</strong> ${escapeHtml(company)}</p>
@@ -208,7 +208,7 @@ export async function POST(request: Request) {
     let emailSent = false;
     try {
     await mailer.sendMail({
-      from: `UpLikeStar <${sender}>`,
+      from: `RNP Tech Solutions <${sender}>`,
       to: recipient,
       replyTo: email,
       subject,

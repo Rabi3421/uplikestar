@@ -70,7 +70,7 @@ This project uses Tailwind CSS for styling with the following features:
 The contact form now submits to `/api/contact`, which:
 
 - appends the lead to a Google Sheet
-- sends a notification email from `arntechsofficial@gmail.com` to `rnpmech.enggr@gmail.com`
+- sends a notification email from `rnptechsolutionsofficial@gmail.com` to `rnpmech.enggr@gmail.com`
 
 ### Required environment variables
 
@@ -83,7 +83,7 @@ GOOGLE_SERVICE_ACCOUNT_JSON='{"type":"service_account","project_id":"...","priva
 # GOOGLE_SERVICE_ACCOUNT_EMAIL=service-account@project.iam.gserviceaccount.com
 # GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\n...\n-----END PRIVATE KEY-----\n"
 GOOGLE_SHEETS_RANGE=Sheet1!A:H
-GMAIL_USER=arntechsofficial@gmail.com
+GMAIL_USER=rnptechsolutionsofficial@gmail.com
 GMAIL_APP_PASSWORD=your_gmail_app_password_without_spaces
 CONTACT_TO_EMAIL=rnpmech.enggr@gmail.com
 ```
@@ -93,7 +93,7 @@ CONTACT_TO_EMAIL=rnpmech.enggr@gmail.com
 - Share the target spreadsheet with the service account email from `GOOGLE_SERVICE_ACCOUNT_JSON`
 - Share the target spreadsheet with the service account email from `GOOGLE_SERVICE_ACCOUNT_JSON` or `GOOGLE_SERVICE_ACCOUNT_EMAIL`
 - Create columns like: `Timestamp`, `Name`, `Email`, `Company`, `Service`, `Message`, `Source`, `Status`
-- Use a Gmail App Password for `arntechsofficial@gmail.com` if the account has 2-factor authentication enabled, and paste it without spaces
+- Use a Gmail App Password for `rnptechsolutionsofficial@gmail.com` if the account has 2-factor authentication enabled, and paste it without spaces
 
 ## 📱 Deployment
 

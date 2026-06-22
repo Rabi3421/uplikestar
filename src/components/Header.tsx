@@ -1,8 +1,10 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 import { servicePages } from '@/app/services/servicePages';
+import AppImage from '@/components/ui/AppImage';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 
@@ -23,15 +25,46 @@ const pageLinks = [
   { label: 'Terms & Conditions', href: '/terms-and-conditions', description: 'General website and engagement terms' },
 ];
 
+const serviceImages = {
+  'website-development': {
+    src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=240&q=80',
+    alt: 'Website development workspace with code on laptop',
+  },
+  'custom-software-development': {
+    src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=240&q=80',
+    alt: 'Software team collaborating around a laptop',
+  },
+  'inventory-management-systems': {
+    src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=240&q=80',
+    alt: 'Warehouse inventory and logistics shelves',
+  },
+  'business-automation': {
+    src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=240&q=80',
+    alt: 'Business team planning automation workflow',
+  },
+  'erp-crm-solutions': {
+    src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=240&q=80',
+    alt: 'Analytics dashboard for ERP and CRM reporting',
+  },
+  'ecommerce-development': {
+    src: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=240&q=80',
+    alt: 'E-commerce shopping and online payment screen',
+  },
+} as const;
+
 export default function Header() {
+  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const isHomePage = pathname === '/';
 
   const serviceLinks = useMemo(
-    () => [{ label: 'All Services', href: '/services', description: 'Browse all UpLikeStar service categories' }, ...servicePages.map((service) => ({
+    () => [{ label: 'All Services', href: '/services', description: 'Browse all RNP Tech Solutions service categories', image: undefined }, ...servicePages.map((service) => ({
       label: service.shortLabel,
       href: service.path,
       description: service.metaDescription,
+      image: serviceImages[service.slug],
     }))],
     [],
   );
@@ -46,6 +79,18 @@ export default function Header() {
   };
 
   const closeDropdowns = () => setActiveDropdown(null);
+  const shouldUseSolidNav = !isHomePage || isScrolled;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 60);
+    };
+
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -63,13 +108,17 @@ export default function Header() {
       `}</style>
       <nav
         id="main-nav"
-        className="fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-5 flex justify-between items-center"
+        className={`fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-5 flex justify-between items-center ${shouldUseSolidNav ? 'nav-scrolled' : ''}`}
         role="navigation"
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5" aria-label="UpLikeStar Home">
-          <AppLogo width={228} height={57} imageClassName="h-[48px] w-auto sm:h-[57px]" />
+        <a href="/" className="flex items-center gap-2.5" aria-label="RNP Tech Solutions Home">
+          <AppLogo
+            width={180}
+            height={45}
+            imageClassName="h-9 w-auto sm:h-11 object-contain"
+          />
         </a>
 
         {/* Desktop Links */}
@@ -99,12 +148,12 @@ export default function Header() {
             </button>
 
             {activeDropdown === 'services' ? (
-              <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
-                <div className="w-[640px] rounded-[28px] border border-white/10 bg-[#0B1030]/92 backdrop-blur-2xl shadow-[0_24px_70px_rgba(0,0,0,0.35)] p-4">
-                  <div className="grid grid-cols-[220px_1fr] gap-4">
-                    <div className="rounded-2xl bg-white/[0.03] border border-white/8 p-5">
+              <div className="absolute top-full left-1/2 z-[120] -translate-x-1/2 pt-4">
+                <div className="w-[900px] rounded-[28px] border border-white/10 bg-[#080D29] shadow-[0_28px_80px_rgba(0,0,0,0.45)] p-4">
+                  <div className="grid grid-cols-[250px_1fr] gap-4">
+                    <div className="rounded-2xl bg-white/[0.045] border border-white/10 p-5">
                       <p className="text-accent text-[11px] font-700 uppercase tracking-[0.24em] mb-3">Services</p>
-                      <h3 className="text-white text-lg font-700 leading-snug mb-2">Explore what UpLikeStar builds</h3>
+                      <h3 className="text-white text-lg font-700 leading-snug mb-2">Explore what RNP Tech Solutions builds</h3>
                       <p className="text-white/55 text-sm leading-relaxed mb-4">
                         Dedicated pages for websites, software, ERP CRM, inventory systems, e-commerce, and automation.
                       </p>
@@ -118,16 +167,30 @@ export default function Header() {
                       </a>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid grid-cols-2 gap-3">
                       {serviceLinks.slice(1).map((link) => (
                         <a
                           key={link.label}
                           href={link.href}
                           onClick={closeDropdowns}
-                          className="rounded-xl border border-transparent px-4 py-3 hover:border-white/10 hover:bg-white/[0.035] transition-all"
+                          className="group grid grid-cols-[82px_1fr] gap-3 rounded-xl border border-transparent p-2 hover:border-white/10 hover:bg-white/[0.06] transition-all"
                         >
-                          <p className="text-white text-sm font-700 mb-1">{link.label}</p>
-                          <p className="text-white/50 text-[11px] leading-relaxed line-clamp-2">{link.description}</p>
+                          {link.image ? (
+                            <div className="relative h-[72px] overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
+                              <AppImage
+                                src={link.image.src}
+                                alt={link.image.alt}
+                                fill
+                                sizes="82px"
+                                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                              />
+                              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1030]/45 via-transparent to-transparent" />
+                            </div>
+                          ) : null}
+                          <div className="min-w-0 py-1">
+                            <p className="text-white text-sm font-700 leading-snug mb-1">{link.label}</p>
+                            <p className="text-white/50 text-[11px] leading-relaxed line-clamp-2">{link.description}</p>
+                          </div>
                         </a>
                       ))}
                     </div>

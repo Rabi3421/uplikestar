@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title>RNP Tech Solutions</title>
+  <rect width="512" height="512" rx="112" fill="#0A0A2E"/>
+  <circle cx="256" cy="256" r="172" fill="none" stroke="#00D4FF" stroke-width="24"/>
+  <circle cx="256" cy="256" r="132" fill="none" stroke="#a78bfa" stroke-width="10" opacity="0.85"/>
+  <text x="256" y="284" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="112" font-weight="800" fill="#FFFFFF">RNP</text>
+  <text x="256" y="342" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#00D4FF">TECH</text>
+</svg>

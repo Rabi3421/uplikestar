@@ -53,7 +53,7 @@ export default function HeroSection() {
             <div className="inline-flex items-center gap-2 w-fit rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 mb-7">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
               <span className="text-accent text-[11px] font-700 uppercase tracking-widest">
-                #1 Software Company in Noida
+                #1 SOFTWARE & WEB SOLUTIONS PARTNER
               </span>
             </div>
 
@@ -86,9 +86,9 @@ export default function HeroSection() {
 
             {/* Description */}
             <p className="text-base md:text-lg text-white/55 font-400 leading-relaxed max-w-xl mb-10">
-              UpLikeStar helps businesses modernize with scalable websites, custom software,
-              inventory management systems, CRM/ERP solutions, and end-to-end automation — all
-              delivered on time and built for long-term growth.
+              RNP Tech Solutions helps businesses modernize with scalable websites, custom software,
+              inventory management systems, CRM/ERP solutions, and end-to-end automation — built for
+              long-term growth.
             </p>
 
             {/* CTA Buttons */}
@@ -136,7 +136,7 @@ export default function HeroSection() {
                   <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
                   <span className="w-3 h-3 rounded-full bg-green-500/70" />
                 </div>
-                <span className="text-white/30 text-xs font-500">arn-tech · dashboard</span>
+                <span className="text-white/30 text-xs font-500">rnp-tech dashboard</span>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-emerald-400 text-[11px] font-600">LIVE</span>

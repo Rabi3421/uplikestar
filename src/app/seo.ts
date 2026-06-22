@@ -1,14 +1,14 @@
 export const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:4028';
 
 export const siteConfig = {
-  name: 'UpLikeStar',
-  legalName: 'UpLikeStar',
-  title: 'Software Development Company in Noida | Website Development & Automation | UpLikeStar',
+  name: 'RNP Tech Solutions',
+  legalName: 'RNP Tech Solutions',
+  title: 'RNP Tech Solutions | Websites, Software, Dashboards & Business Automation',
   shortDescription:
-    'UpLikeStar delivers software development, website development, inventory management systems, ERP/CRM solutions, and business automation for growing businesses.',
+    'RNP Tech Solutions builds websites, custom software, dashboards, inventory/ERP systems, CRM solutions and business automation for growing businesses.',
   longDescription:
-    'UpLikeStar is an innovative technology company focused on delivering smart, affordable, and customized digital solutions for businesses of all sizes. We help businesses modernize with custom software, website development, inventory management systems, ERP/CRM platforms, and business automation tools.',
-  email: 'hello@arntech.in',
+    'RNP Tech Solutions provides websites, apps, dashboards, custom software, inventory/ERP, CRM systems, and business automation for small and growing businesses.',
+  email: 'hello@rnptechsolutions.com',
   phone: '+91 120 400 1234',
   address: {
     streetAddress: 'A-142, Sector 63',
@@ -38,9 +38,9 @@ export const targetKeywords = [
 
 export const faqItems = [
   {
-    question: 'What services does UpLikeStar offer?',
+    question: 'What services does RNP Tech Solutions offer?',
     answer:
-      'UpLikeStar offers custom software development, website development, inventory management systems, ERP and CRM solutions, e-commerce development, and business automation services for startups, SMEs, and growing enterprises.',
+      'RNP Tech Solutions offers custom software development, website development, inventory management systems, ERP and CRM solutions, e-commerce development, and business automation services for startups, SMEs, and growing enterprises.',
   },
   {
     question: 'Do you build custom software for traditional businesses?',
@@ -48,7 +48,7 @@ export const faqItems = [
       'Yes. We specialize in helping traditional and growing businesses digitize their operations with tailored software, automation workflows, and business management platforms that match their real-world processes.',
   },
   {
-    question: 'Can UpLikeStar build SEO-friendly business websites?',
+    question: 'Can RNP Tech Solutions build SEO-friendly business websites?',
     answer:
       'Yes. We develop fast, mobile-friendly, SEO-ready websites with technical optimization, strong content structure, and conversion-focused design to help businesses improve visibility and generate enquiries.',
   },
@@ -58,9 +58,9 @@ export const faqItems = [
       'Yes. We build inventory management software, reporting dashboards, workflow automation tools, and integrated systems that reduce manual work, improve accuracy, and support operational growth.',
   },
   {
-    question: 'Where is UpLikeStar located?',
+    question: 'Where is RNP Tech Solutions located?',
     answer:
-      'UpLikeStar is based in Noida, Uttar Pradesh, India, and works with businesses looking for reliable software development, website development, and automation partners.',
+      'RNP Tech Solutions is based in Noida, Uttar Pradesh, India, and works with businesses looking for reliable software development, website development, and automation partners.',
   },
 ];
 
@@ -70,7 +70,7 @@ export const organizationSchema = {
   name: siteConfig.legalName,
   alternateName: siteConfig.name,
   url: siteUrl,
-  logo: `${siteUrl}/assets/images/app_logo.png`,
+  logo: `${siteUrl}/assets/images/logo.png`,
   image: `${siteUrl}${siteConfig.ogImage}`,
   description: siteConfig.longDescription,
   email: siteConfig.email,

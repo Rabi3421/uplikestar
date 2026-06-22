@@ -94,9 +94,9 @@ export default function StaticContentPage({ page }: StaticContentPageProps) {
           ) : null}
 
           <div className="mt-10 bg-gradient-hero rounded-[32px] p-8 md:p-10">
-            <h2 className="text-3xl md:text-4xl font-800 text-white mb-4">Need to speak with UpLikeStar directly?</h2>
+            <h2 className="text-3xl md:text-4xl font-800 text-white mb-4">Need to speak with RNP Tech Solutions directly?</h2>
             <p className="text-white/70 text-base md:text-lg leading-relaxed max-w-2xl mb-6">
-              If you have questions about our services, policies, or business process, reach out to UpLikeStar and our team will guide you further.
+              If you have questions about our services, policies, or business process, reach out to RNP Tech Solutions and our team will guide you further.
             </p>
             <a href="/contact" className="btn-primary px-8 py-4 rounded-full text-base font-600 inline-flex items-center justify-center gap-2">
               <span>Contact Our Team</span>

@@ -75,7 +75,7 @@ export default function ServiceLandingPage({ service }: ServiceLandingPageProps)
               {service.intro}
             </p>
             <p className="text-base text-muted-foreground leading-relaxed">
-              Businesses searching for <strong className="text-foreground font-700">{service.primaryKeyword}</strong> often need a partner that understands both technology and business operations. UpLikeStar focuses on practical, scalable delivery so your investment creates measurable efficiency, better visibility, and long-term value.
+              Businesses searching for <strong className="text-foreground font-700">{service.primaryKeyword}</strong> often need a partner that understands both technology and business operations. RNP Tech Solutions focuses on practical, scalable delivery so your investment creates measurable efficiency, better visibility, and long-term value.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function ServiceLandingPage({ service }: ServiceLandingPageProps)
           <div>
             <h2 className="text-3xl md:text-4xl font-800 text-white mb-3">Need help choosing the right solution?</h2>
             <p className="text-white/65 text-base md:text-lg max-w-2xl">
-              Talk to UpLikeStar about your current process, growth goals, and operational bottlenecks. We will recommend the most practical digital solution for your business.
+              Talk to RNP Tech Solutions about your current process, growth goals, and operational bottlenecks. We will recommend the most practical digital solution for your business.
             </p>
           </div>
           <a href="/#contact" className="btn-primary px-8 py-4 rounded-full text-base font-600 inline-flex items-center justify-center gap-2 whitespace-nowrap">
