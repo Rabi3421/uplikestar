@@ -86,8 +86,8 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-[#F0F2FF] reveal-on-scroll section-reveal">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="contact" className="px-6 md:px-12 py-24 md:py-32 bg-[#F0F2FF] reveal-on-scroll section-reveal">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4">

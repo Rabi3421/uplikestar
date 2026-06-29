@@ -96,109 +96,115 @@ export default function Header() {
     <>
       <style>{`
         #main-nav {
-          background: transparent;
-          transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+          background: rgba(7, 8, 34, 0.76);
+          backdrop-filter: blur(18px);
+          -webkit-backdrop-filter: blur(18px);
+          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+          box-shadow: 0 10px 34px rgba(0, 0, 0, 0.22);
+          transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
         }
         #main-nav.nav-scrolled {
-          background: rgba(10, 10, 46, 0.92);
+          background: rgba(7, 8, 34, 0.96);
           backdrop-filter: blur(20px);
           -webkit-backdrop-filter: blur(20px);
-          box-shadow: 0 2px 32px rgba(0,0,0,0.3);
+          border-bottom-color: rgba(255, 255, 255, 0.12);
+          box-shadow: 0 12px 40px rgba(0, 0, 0, 0.38);
         }
       `}</style>
       <nav
         id="main-nav"
-        className={`fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-5 flex justify-between items-center ${shouldUseSolidNav ? 'nav-scrolled' : ''}`}
+        className="fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-5"
         role="navigation"
         aria-label="Main navigation"
       >
-        {/* Logo */}
-        <a href="/" className="flex items-center gap-2.5" aria-label="RNP Tech Solutions Home">
-          <AppLogo
-            width={180}
-            height={45}
-            imageClassName="h-9 w-auto sm:h-11 object-contain"
-          />
-        </a>
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between">
+          {/* Logo */}
+          <a href="/" className="flex items-center gap-2.5" aria-label="RNP Tech Solutions Home">
+            <AppLogo
+              width={235}
+              height={50}
+              imageClassName="h-10 w-auto sm:h-11"
+            />
+          </a>
 
-        {/* Desktop Links */}
-        <div className="hidden xl:flex items-center gap-8" onMouseLeave={closeDropdowns}>
-          {primaryLinks?.map((link) => (
-            <a
-              key={link?.label}
-              href={link?.href}
-              className="text-sm font-500 text-white/70 hover:text-white transition-colors duration-200 relative group"
-            >
-              {link?.label}
-              <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300" />
-            </a>
-          ))}
+          {/* Desktop Links */}
+          <div className="hidden xl:flex items-center gap-8" onMouseLeave={closeDropdowns}>
+            {primaryLinks?.map((link) => (
+              <a
+                key={link?.label}
+                href={link?.href}
+                className="text-sm font-500 text-white/70 hover:text-white transition-colors duration-200 relative group"
+              >
+                {link?.label}
+                <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-accent group-hover:w-full transition-all duration-300" />
+              </a>
+            ))}
 
-          <div className="relative">
-            <button
-              type="button"
-              onMouseEnter={() => setActiveDropdown('services')}
-              onClick={() => handleDropdownToggle('services')}
-              className="text-sm font-500 text-white/70 hover:text-white transition-colors duration-200 inline-flex items-center gap-1.5"
-              aria-expanded={activeDropdown === 'services'}
-              aria-haspopup="true"
-            >
-              <span>Services</span>
-              <Icon name="ChevronDownIcon" size={16} className={`transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
-            </button>
+            <div className="relative">
+              <button
+                type="button"
+                onMouseEnter={() => setActiveDropdown('services')}
+                onClick={() => handleDropdownToggle('services')}
+                className="text-sm font-500 text-white/70 hover:text-white transition-colors duration-200 inline-flex items-center gap-1.5"
+                aria-expanded={activeDropdown === 'services'}
+                aria-haspopup="true"
+              >
+                <span>Services</span>
+                <Icon name="ChevronDownIcon" size={16} className={`transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
+              </button>
 
-            {activeDropdown === 'services' ? (
-              <div className="absolute top-full left-1/2 z-[120] -translate-x-1/2 pt-4">
-                <div className="w-[900px] rounded-[28px] border border-white/10 bg-[#080D29] shadow-[0_28px_80px_rgba(0,0,0,0.45)] p-4">
-                  <div className="grid grid-cols-[250px_1fr] gap-4">
-                    <div className="rounded-2xl bg-white/[0.045] border border-white/10 p-5">
-                      <p className="text-accent text-[11px] font-700 uppercase tracking-[0.24em] mb-3">Services</p>
-                      <h3 className="text-white text-lg font-700 leading-snug mb-2">Explore what RNP Tech Solutions builds</h3>
-                      <p className="text-white/55 text-sm leading-relaxed mb-4">
-                        Dedicated pages for websites, software, ERP CRM, inventory systems, e-commerce, and automation.
-                      </p>
-                      <a
-                        href="/services"
-                        onClick={closeDropdowns}
-                        className="inline-flex items-center gap-2 text-sm font-600 text-accent hover:text-white transition-colors"
-                      >
-                        View all services
-                        <Icon name="ArrowRightIcon" size={14} className="text-accent" />
-                      </a>
-                    </div>
-
-                    <div className="grid grid-cols-2 gap-3">
-                      {serviceLinks.slice(1).map((link) => (
+              {activeDropdown === 'services' ? (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4">
+                  <div className="w-[820px] rounded-[28px] border border-white/15 bg-[#070822] shadow-[0_28px_80px_rgba(0,0,0,0.58)] p-4">
+                    <div className="grid grid-cols-[230px_1fr] gap-4">
+                      <div className="rounded-2xl bg-[#10143A] border border-white/12 p-5">
+                        <p className="text-accent text-[11px] font-700 uppercase tracking-[0.24em] mb-3">Services</p>
+                        <h3 className="text-white text-lg font-700 leading-snug mb-2">Explore what RNP Tech Solutions builds</h3>
+                        <p className="text-white/72 text-sm leading-relaxed mb-4">
+                          Dedicated pages for websites, software, ERP CRM, inventory systems, e-commerce, and automation.
+                        </p>
                         <a
-                          key={link.label}
-                          href={link.href}
+                          href="/services"
                           onClick={closeDropdowns}
-                          className="group grid grid-cols-[82px_1fr] gap-3 rounded-xl border border-transparent p-2 hover:border-white/10 hover:bg-white/[0.06] transition-all"
+                          className="inline-flex items-center gap-2 text-sm font-600 text-accent hover:text-white transition-colors"
                         >
-                          {link.image ? (
-                            <div className="relative h-[72px] overflow-hidden rounded-lg border border-white/10 bg-white/[0.04]">
-                              <AppImage
-                                src={link.image.src}
-                                alt={link.image.alt}
-                                fill
-                                sizes="82px"
-                                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                              />
-                              <div className="absolute inset-0 bg-gradient-to-t from-[#0B1030]/45 via-transparent to-transparent" />
-                            </div>
-                          ) : null}
-                          <div className="min-w-0 py-1">
-                            <p className="text-white text-sm font-700 leading-snug mb-1">{link.label}</p>
-                            <p className="text-white/50 text-[11px] leading-relaxed line-clamp-2">{link.description}</p>
-                          </div>
+                          View all services
+                          <Icon name="ArrowRightIcon" size={14} className="text-accent" />
                         </a>
-                      ))}
+                      </div>
+
+                      <div className="grid grid-cols-2 gap-2">
+                        {serviceLinks.slice(1).map((link) => (
+                          <a
+                            key={link.label}
+                            href={link.href}
+                            onClick={closeDropdowns}
+                            className="group grid grid-cols-[82px_1fr] gap-3 rounded-xl border border-white/8 bg-[#0D1234] p-2 hover:border-accent/35 hover:bg-[#151B49] transition-all"
+                          >
+                            {link.image ? (
+                              <div className="relative h-[72px] overflow-hidden rounded-lg border border-white/12 bg-[#151B49]">
+                                <AppImage
+                                  src={link.image.src}
+                                  alt={link.image.alt}
+                                  fill
+                                  sizes="82px"
+                                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1030]/45 via-transparent to-transparent" />
+                              </div>
+                            ) : null}
+                            <div className="min-w-0 py-1">
+                              <p className="text-white text-sm font-700 leading-snug mb-1">{link.label}</p>
+                              <p className="text-white/68 text-[11px] leading-relaxed line-clamp-2">{link.description}</p>
+                            </div>
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            ) : null}
-          </div>
+              ) : null}
+            </div>
 
           {/* <div className="relative">
             <button
@@ -243,28 +249,29 @@ export default function Header() {
               </div>
             ) : null}
           </div> */}
-        </div>
+          </div>
 
-        {/* CTA */}
-        <div className="hidden xl:flex items-center gap-3">
-          <a
-            href="/contact"
-            className="btn-primary px-6 py-2.5 rounded-full text-sm font-600 inline-flex items-center gap-2"
+          {/* CTA */}
+          <div className="hidden xl:flex items-center gap-3">
+            <a
+              href="/contact"
+              className="btn-primary px-6 py-2.5 rounded-full text-sm font-600 inline-flex items-center gap-2"
+            >
+              <span>Start Project</span>
+              <Icon name="ArrowUpRightIcon" size={16} className="text-white" />
+            </a>
+          </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="xl:hidden text-white p-2 rounded-lg"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={menuOpen}
           >
-            <span>Start Project</span>
-            <Icon name="ArrowUpRightIcon" size={16} className="text-white" />
-          </a>
+            <Icon name={menuOpen ? 'XMarkIcon' : 'Bars3Icon'} size={24} />
+          </button>
         </div>
-
-        {/* Mobile hamburger */}
-        <button
-          className="xl:hidden text-white p-2 rounded-lg"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-        >
-          <Icon name={menuOpen ? 'XMarkIcon' : 'Bars3Icon'} size={24} />
-        </button>
       </nav>
       {/* Mobile Menu Overlay */}
       {menuOpen && (

@@ -11,8 +11,8 @@ const milestones = [
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-background grid-bg reveal-on-scroll section-reveal">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="about" className="px-6 md:px-12 py-24 md:py-32 bg-background grid-bg reveal-on-scroll section-reveal">
+      <div className="max-w-7xl mx-auto">
         {/* Section label */}
         <div className="flex items-center gap-3 mb-6">
           <div className="w-8 h-px bg-gradient-to-r from-primary to-accent" />

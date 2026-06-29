@@ -14,7 +14,7 @@ export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen overflow-hidden bg-gradient-hero"
+      className="relative w-full min-h-screen overflow-hidden bg-gradient-hero px-6 md:px-12"
       style={{ borderBottomLeftRadius: '80px' }}>
 
       {/* Background image */}
@@ -44,7 +44,7 @@ export default function HeroSection() {
       <div className="absolute inset-0 grid-bg opacity-25" aria-hidden="true" />
 
       {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-20 md:pt-40 md:pb-28 min-h-screen flex items-center">
+      <div className="relative z-10 max-w-7xl mx-auto pt-32 pb-20 md:pt-40 md:pb-28 min-h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
 
           {/* ── LEFT COLUMN ── */}

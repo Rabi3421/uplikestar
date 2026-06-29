@@ -4,7 +4,7 @@ import Icon from '@/components/ui/AppIcon';
 
 export default function CTABanner() {
   return (
-    <section className="px-4 md:px-6 py-12 bg-background reveal-on-scroll section-reveal">
+    <section className="px-6 md:px-12 py-12 bg-background reveal-on-scroll section-reveal">
       <div className="max-w-7xl mx-auto">
         <div className="relative bg-gradient-hero rounded-[40px] md:rounded-[60px] overflow-hidden min-h-[400px] md:min-h-[480px] flex items-center">
           {/* Background image */}

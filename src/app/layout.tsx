@@ -66,13 +66,8 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
   },
   icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/assets/images/favicon-192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/assets/images/favicon-512.png', type: 'image/png', sizes: '512x512' },
-    ],
-    shortcut: [{ url: '/favicon.ico' }],
-    apple: [{ url: '/assets/images/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }],
+    icon: [{ url: '/assets/images/rnptechsolutions-logo.svg', type: 'image/svg+xml' }],
+    shortcut: [{ url: '/assets/images/rnptechsolutions-logo.svg', type: 'image/svg+xml' }],
   },
 };
 

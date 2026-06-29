@@ -39,7 +39,7 @@ export default function TestimonialsSection() {
   return (
     <section
       id="testimonials"
-      className="py-24 md:py-32 bg-gradient-hero relative overflow-hidden reveal-on-scroll section-reveal">
+      className="px-6 md:px-12 py-24 md:py-32 bg-gradient-hero relative overflow-hidden reveal-on-scroll section-reveal">
       
       {/* Background blobs */}
       <div
@@ -47,7 +47,7 @@ export default function TestimonialsSection() {
         style={{ background: 'radial-gradient(circle, #6B21A8 0%, transparent 70%)', filter: 'blur(100px)' }}
         aria-hidden="true" />
       
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4">

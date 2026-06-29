@@ -48,7 +48,7 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section id="why" className="py-24 md:py-32 bg-gradient-hero relative overflow-hidden reveal-on-scroll section-reveal">
+    <section id="why" className="px-6 md:px-12 py-24 md:py-32 bg-gradient-hero relative overflow-hidden reveal-on-scroll section-reveal">
       {/* Background decoration */}
       <div
         className="absolute top-0 right-0 w-[600px] h-[600px] opacity-10"
@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
         aria-hidden="true"
       />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10">
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 mb-4">

@@ -50,8 +50,8 @@ const projects = [
 
 export default function PortfolioSection() {
   return (
-    <section id="portfolio" className="py-24 md:py-32 bg-background reveal-on-scroll section-reveal">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="portfolio" className="px-6 md:px-12 py-24 md:py-32 bg-background reveal-on-scroll section-reveal">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>

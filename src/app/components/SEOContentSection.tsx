@@ -14,8 +14,8 @@ const focusAreas = [
 
 export default function SEOContentSection() {
   return (
-    <section className="py-24 md:py-32 bg-background reveal-on-scroll section-reveal" aria-labelledby="seo-content-heading">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section className="px-6 md:px-12 py-24 md:py-32 bg-background reveal-on-scroll section-reveal" aria-labelledby="seo-content-heading">
+      <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-start">
           <div>
             <div className="flex items-center gap-3 mb-4">

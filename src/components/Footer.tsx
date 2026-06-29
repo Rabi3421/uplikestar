@@ -85,9 +85,9 @@ export default function Footer() {
           <div className="space-y-5 max-w-sm">
             <a href="/" aria-label="RNP Tech Solutions home" className="flex items-center gap-3">
               <AppLogo
-                width={220}
-                height={55}
-                imageClassName="h-11 w-auto sm:h-12 object-contain"
+                width={260}
+                height={56}
+                imageClassName="h-12 w-auto sm:h-14"
               />
             </a>
 

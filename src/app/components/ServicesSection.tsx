@@ -82,8 +82,8 @@ const services: Service[] = [
 
 export default function ServicesSection() {
   return (
-    <section id="services" className="py-24 md:py-32 bg-[#F0F2FF] reveal-on-scroll section-reveal">
-      <div className="max-w-7xl mx-auto px-6 md:px-12">
+    <section id="services" className="px-6 md:px-12 py-24 md:py-32 bg-[#F0F2FF] reveal-on-scroll section-reveal">
+      <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
           <div>
