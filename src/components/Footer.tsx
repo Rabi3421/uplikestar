@@ -5,26 +5,30 @@ import AppIcon from '@/components/ui/AppIcon';
 import AppLogo from '@/components/ui/AppLogo';
 
 const serviceLinks = [
-  { label: 'Website Development', href: '/services/website-development' },
-  { label: 'Custom Software', href: '/services/custom-software-development' },
-  { label: 'Inventory Systems', href: '/services/inventory-management-systems' },
-  { label: 'Business Automation', href: '/services/business-automation' },
-  { label: 'ERP / CRM Solutions', href: '/services/erp-crm-solutions' },
-  { label: 'E-commerce Development', href: '/services/ecommerce-development' },
+  { label: 'Business Website Setup', href: '/services/website-development' },
+  { label: 'Business Management Software', href: '/services/custom-software-development' },
+  { label: 'Enquiry & Booking System', href: '/services/business-automation' },
+  { label: 'Role-Based Dashboards', href: '/services/erp-crm-solutions' },
+  { label: 'Customer & Staff Management', href: '/services/inventory-management-systems' },
+  { label: 'Monthly Support & Maintenance', href: '/services/ecommerce-development' },
 ];
 
 const companyLinks = [
   { label: 'About Us', href: '/about' },
-  { label: 'Case Studies', href: '/case-studies' },
+  { label: 'Services', href: '/services' },
   { label: 'Industries', href: '/industries' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'FAQ', href: '/faq' },
-  { label: 'Portfolio', href: '/portfolio' },
   { label: 'Contact', href: '/contact' },
 ];
 
 const legalLinks = [
   { label: 'Privacy Policy', href: '/privacy-policy' },
   { label: 'Terms & Conditions', href: '/terms-and-conditions' },
+  { label: 'Refund Policy', href: '/refund-policy' },
+  { label: 'Payment Policy', href: '/payment-policy' },
+  { label: 'Disclaimer', href: '/disclaimer' },
+  { label: 'Cookie Policy', href: '/cookie-policy' },
 ];
 
 const contactLinks = [
@@ -32,7 +36,7 @@ const contactLinks = [
     icon: 'PhoneIcon',
     label: 'Call',
     value: siteConfig.phone,
-    href: 'tel:+911204001234',
+    href: `tel:${siteConfig.phone.replace(/\s/g, '')}`,
   },
   {
     icon: 'EnvelopeIcon',
@@ -41,10 +45,10 @@ const contactLinks = [
     href: `mailto:${siteConfig.email}`,
   },
   {
-    icon: 'MapPinIcon',
-    label: 'Office',
-    value: 'Sector 63, Noida, Uttar Pradesh',
-    href: '/contact',
+    icon: 'ChatBubbleLeftIcon',
+    label: 'WhatsApp',
+    value: 'Chat on WhatsApp',
+    href: `https://wa.me/${siteConfig.whatsapp}?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20services.`,
   },
 ];
 
@@ -54,13 +58,13 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="bg-gradient-hero rounded-[32px] p-8 md:p-10 mb-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
           <div className="max-w-2xl">
-            <p className="text-accent text-xs font-700 uppercase tracking-[0.24em] mb-3">Ready To Build</p>
+            <p className="text-accent text-xs font-700 uppercase tracking-[0.24em] mb-3">Start Today</p>
             <h2 className="text-3xl md:text-4xl font-800 text-white mb-3">
-              Need a reliable technology partner for your next project?
+              Ready to take your business online?
             </h2>
             <p className="text-white/70 text-base leading-relaxed">
-              Speak with RNP Tech Solutions about websites, software, ERP CRM platforms, inventory systems,
-              e-commerce, and automation solutions tailored to your business.
+              Get a free demo of our professional website and business management system.
+              We will set up a personalized digital solution for your business — on an affordable monthly plan.
             </p>
           </div>
 
@@ -69,14 +73,14 @@ export default function Footer() {
               href="/contact"
               className="btn-primary px-7 py-3.5 rounded-full text-sm font-600 inline-flex items-center justify-center gap-2"
             >
-              <span>Book a Consultation</span>
+              <span>Get Free Demo</span>
               <AppIcon name="ArrowRightIcon" size={16} className="text-white" />
             </a>
             <a
-              href="/services"
+              href="/pricing"
               className="btn-outline px-7 py-3.5 rounded-full text-sm font-600 inline-flex items-center justify-center gap-2"
             >
-              <span>Explore Services</span>
+              <span>View Pricing</span>
             </a>
           </div>
         </div>
@@ -92,14 +96,15 @@ export default function Footer() {
             </a>
 
             <p className="text-muted-foreground text-sm leading-7">
-              RNP Tech Solutions delivers smart, affordable, and customized digital
-              solutions for businesses that need websites, software, automation, and operational clarity.
+              RNP Tech Solutions provides professional websites and business management systems
+              for salons, schools, clinics, pharmacies, restaurants, gyms, retail shops, and other
+              local businesses — on affordable monthly plans.
             </p>
 
             <div className="grid grid-cols-2 gap-3">
               {[
-                { value: '80+', label: 'Clients Served' },
-                { value: '6+', label: 'Years of Delivery' },
+                { value: 'Free', label: 'Demo Available' },
+                { value: '1 Month', label: 'Free Trial*' },
               ].map((item) => (
                 <div key={item.label} className="rounded-2xl border border-border bg-card px-4 py-4 shadow-sm">
                   <p className="text-foreground text-xl font-800">{item.value}</p>
@@ -159,6 +164,8 @@ export default function Footer() {
                 <a
                   key={item.label}
                   href={item.href}
+                  target={item.href.startsWith('https') ? '_blank' : undefined}
+                  rel={item.href.startsWith('https') ? 'noopener noreferrer' : undefined}
                   className="flex items-start gap-3 rounded-2xl border border-border bg-card px-4 py-4 shadow-sm hover:border-primary/40 hover:shadow-card-hover transition-all"
                 >
                   <div className="w-10 h-10 rounded-2xl bg-gradient-primary flex items-center justify-center shrink-0">
@@ -188,7 +195,7 @@ export default function Footer() {
               <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
               All systems operational
             </span>
-            <span>Noida, Uttar Pradesh, India</span>
+            <span>India</span>
           </div>
         </div>
       </div>

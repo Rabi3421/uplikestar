@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
+import { siteConfig } from '@/app/seo';
 
 const contactInfo = [
   {
@@ -12,34 +13,44 @@ const contactInfo = [
   {
     icon: 'PhoneIcon',
     label: 'Phone',
-    value: '+91 120 400 1234',
-    href: 'tel:+911204001234',
+    value: siteConfig.phone,
+    href: `tel:${siteConfig.phone.replace(/\s/g, '')}`,
   },
   {
     icon: 'EnvelopeIcon',
     label: 'Email',
-    value: 'hello@rnptechsolutions.com',
-    href: 'mailto:hello@rnptechsolutions.com',
+    value: siteConfig.email,
+    href: `mailto:${siteConfig.email}`,
   },
   {
-    icon: 'ClockIcon',
-    label: 'Business Hours',
-    value: 'Mon – Sat, 9:00 AM – 7:00 PM IST',
+    icon: 'ChatBubbleLeftIcon',
+    label: 'WhatsApp',
+    value: 'Chat with us on WhatsApp',
+    href: `https://wa.me/${siteConfig.whatsapp}?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20business%20website%20and%20management%20system.`,
   },
 ];
 
-const socialLinks = [
-  { icon: 'LinkIcon', label: 'LinkedIn', href: '#' },
-  { icon: 'LinkIcon', label: 'Twitter', href: '#' },
-  { icon: 'LinkIcon', label: 'Instagram', href: '#' },
+const businessTypes = [
+  'Salon / Beauty Parlour',
+  'School / Coaching Center',
+  'Clinic / Hospital',
+  'Pharmacy / Medicine Shop',
+  'Restaurant / Cafe',
+  'Gym / Fitness Center',
+  'Retail Shop',
+  'Real Estate Agency',
+  'Travel Agency',
+  'Other Local Business',
 ];
 
 export default function ContactSection() {
   const [form, setForm] = useState({
     name: '',
+    phone: '',
     email: '',
-    company: '',
-    service: '',
+    businessName: '',
+    businessType: '',
+    city: '',
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
@@ -61,7 +72,15 @@ export default function ContactSection() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify({
+          name: form.name,
+          phone: form.phone,
+          email: form.email,
+          company: form.businessName,
+          service: form.businessType,
+          city: form.city,
+          message: form.message,
+        }),
       });
 
       const result = (await response.json()) as { success?: boolean; message?: string };
@@ -73,9 +92,11 @@ export default function ContactSection() {
       setSubmitted(true);
       setForm({
         name: '',
+        phone: '',
         email: '',
-        company: '',
-        service: '',
+        businessName: '',
+        businessType: '',
+        city: '',
         message: '',
       });
     } catch (error) {
@@ -96,12 +117,12 @@ export default function ContactSection() {
             <div className="w-8 h-px bg-gradient-to-l from-transparent to-primary" />
           </div>
           <h2 className="text-4xl md:text-5xl font-800 tracking-tight leading-tight text-foreground">
-            Talk to a
+            Let&apos;s Build Your
             <br />
-            <span className="text-gradient-primary">Software Strategy Team</span>
+            <span className="text-gradient-primary">Business Digital System</span>
           </h2>
           <p className="text-muted-foreground text-lg mt-4 max-w-xl mx-auto">
-            Tell us about your website, software, ERP, inventory, or automation requirement and we will get back to you within 24 hours with a tailored plan.
+            Tell us about your business and we will suggest the right website and management solution for you. Free demo available.
           </p>
         </div>
 
@@ -113,15 +134,15 @@ export default function ContactSection() {
                 <div className="w-20 h-20 rounded-full bg-gradient-primary flex items-center justify-center animate-pulse-glow">
                   <Icon name="CheckIcon" size={36} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-800 text-foreground">Message Received!</h3>
+                <h3 className="text-2xl font-800 text-foreground">Enquiry Received!</h3>
                 <p className="text-muted-foreground max-w-sm">
-                  Thank you for reaching out. Our team will contact you within 24 hours with a tailored proposal.
+                  Thank you for reaching out. Our team will contact you within 24 hours to discuss the best digital solution for your business.
                 </p>
                 <button
                   onClick={() => setSubmitted(false)}
                   className="btn-primary px-6 py-2.5 rounded-full text-sm font-600 mt-2"
                 >
-                  <span>Send Another Message</span>
+                  <span>Send Another Enquiry</span>
                 </button>
               </div>
             ) : (
@@ -129,7 +150,7 @@ export default function ContactSection() {
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
                     <label htmlFor="name" className="block text-sm font-600 text-foreground mb-2">
-                      Full Name <span className="text-red-500">*</span>
+                      Your Name <span className="text-red-500">*</span>
                     </label>
                     <input
                       id="name"
@@ -138,22 +159,23 @@ export default function ContactSection() {
                       required
                       value={form.name}
                       onChange={handleChange}
-                      placeholder="Rahul Verma"
+                      placeholder="Your full name"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-600 text-foreground mb-2">
-                      Email Address <span className="text-red-500">*</span>
+                    <label htmlFor="phone" className="block text-sm font-600 text-foreground mb-2">
+                      Phone Number <span className="text-red-500">*</span>
                     </label>
                     <input
-                      id="email"
-                      name="email"
-                      type="email"
+                      id="phone"
+                      name="phone"
+                      type="tel"
                       required
-                      value={form.email}
+                      value={form.phone}
                       onChange={handleChange}
-                      placeholder="rahul@company.in"
+                      placeholder="+91 98765 43210"
+                      autoComplete="tel"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                     />
                   </div>
@@ -161,54 +183,81 @@ export default function ContactSection() {
 
                 <div className="grid sm:grid-cols-2 gap-5">
                   <div>
-                    <label htmlFor="company" className="block text-sm font-600 text-foreground mb-2">
-                      Company Name
+                    <label htmlFor="email" className="block text-sm font-600 text-foreground mb-2">
+                      Email Address
                     </label>
                     <input
-                      id="company"
-                      name="company"
-                      type="text"
-                      value={form.company}
+                      id="email"
+                      name="email"
+                      type="email"
+                      value={form.email}
                       onChange={handleChange}
-                      placeholder="Your Company Pvt Ltd"
+                      placeholder="your@email.com"
                       className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                     />
                   </div>
                   <div>
-                    <label htmlFor="service" className="block text-sm font-600 text-foreground mb-2">
-                      Service Required
+                    <label htmlFor="businessName" className="block text-sm font-600 text-foreground mb-2">
+                      Business Name
+                    </label>
+                    <input
+                      id="businessName"
+                      name="businessName"
+                      type="text"
+                      value={form.businessName}
+                      onChange={handleChange}
+                      placeholder="Your business name"
+                      className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
+                    />
+                  </div>
+                </div>
+
+                <div className="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label htmlFor="businessType" className="block text-sm font-600 text-foreground mb-2">
+                      Business Type
                     </label>
                     <select
-                      id="service"
-                      name="service"
-                      value={form.service}
+                      id="businessType"
+                      name="businessType"
+                      value={form.businessType}
                       onChange={handleChange}
                       className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
                     >
-                      <option value="">Select a service</option>
-                      <option value="custom-software">Custom Software Development</option>
-                      <option value="website">Website Development</option>
-                      <option value="inventory">Inventory Management System</option>
-                      <option value="erp-crm">ERP / CRM Solution</option>
-                      <option value="ecommerce">E-commerce Platform</option>
-                      <option value="automation">Business Automation</option>
-                      <option value="support">Technical Support</option>
+                      <option value="">Select your business type</option>
+                      {businessTypes.map((type) => (
+                        <option key={type} value={type}>{type}</option>
+                      ))}
                     </select>
+                  </div>
+                  <div>
+                    <label htmlFor="city" className="block text-sm font-600 text-foreground mb-2">
+                      City
+                    </label>
+                    <input
+                      id="city"
+                      name="city"
+                      type="text"
+                      value={form.city}
+                      onChange={handleChange}
+                      placeholder="Your city"
+                      className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all"
+                    />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-600 text-foreground mb-2">
-                    Project Details <span className="text-red-500">*</span>
+                    Tell Us About Your Business <span className="text-red-500">*</span>
                   </label>
                   <textarea
                     id="message"
                     name="message"
                     required
-                    rows={5}
+                    rows={4}
                     value={form.message}
                     onChange={handleChange}
-                    placeholder="Describe your project — what you need, your timeline, and any specific requirements..."
+                    placeholder="Tell us about your business, what you need, and any specific requirements..."
                     className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent focus:border-accent transition-all resize-none"
                   />
                 </div>
@@ -218,7 +267,7 @@ export default function ContactSection() {
                   disabled={isSubmitting}
                   className="btn-primary w-full py-4 rounded-xl text-base font-600 inline-flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  <span>{isSubmitting ? 'Sending...' : 'Request Free Demo'}</span>
                   <Icon name="PaperAirplaneIcon" size={18} className="text-white" />
                 </button>
 
@@ -229,7 +278,7 @@ export default function ContactSection() {
                 ) : null}
 
                 <p className="text-center text-muted-foreground text-xs">
-                  We respect your privacy. No spam, ever.
+                  We respect your privacy. Your information will only be used to contact you about our services.
                 </p>
               </form>
             )}
@@ -247,7 +296,12 @@ export default function ContactSection() {
                   <div>
                     <p className="text-muted-foreground text-xs font-600 uppercase tracking-wider mb-0.5">{info.label}</p>
                     {info.href ? (
-                      <a href={info.href} className="text-foreground text-sm font-600 hover:text-primary transition-colors">
+                      <a
+                        href={info.href}
+                        target={info.href.startsWith('https') ? '_blank' : undefined}
+                        rel={info.href.startsWith('https') ? 'noopener noreferrer' : undefined}
+                        className="text-foreground text-sm font-600 hover:text-primary transition-colors"
+                      >
                         {info.value}
                       </a>
                     ) : (
@@ -266,12 +320,12 @@ export default function ContactSection() {
                 aria-hidden="true"
               />
               <Icon name="RocketLaunchIcon" size={28} className="text-accent mb-4" />
-              <h3 className="text-white font-800 text-lg mb-2">Fast-Track Your Project</h3>
+              <h3 className="text-white font-800 text-lg mb-2">Start with a Free Demo</h3>
               <p className="text-white/60 text-sm leading-relaxed mb-5">
-                Get a detailed proposal, timeline, and cost estimate within 48 hours — completely free.
+                We will show you exactly how your business website and management system will look and work — completely free, no obligation.
               </p>
               <div className="space-y-2">
-                {['Free discovery call', 'Technical assessment', 'Detailed proposal', 'No obligation'].map((item) => (
+                {['Free demo call', 'Website preview', 'Dashboard walkthrough', 'No commitment required'].map((item) => (
                   <div key={item} className="flex items-center gap-2">
                     <Icon name="CheckCircleIcon" size={16} variant="solid" className="text-accent" />
                     <span className="text-white/70 text-sm">{item}</span>

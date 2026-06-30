@@ -3,46 +3,46 @@ import Icon from '@/components/ui/AppIcon';
 
 const reasons = [
   {
-    icon: 'StarIcon',
-    title: 'Industry Standard Quality',
-    description: 'Every project follows strict code reviews, CI/CD pipelines, and QA testing before delivery.',
-    stat: '99%',
-    statLabel: 'defect-free delivery',
+    icon: 'BuildingStorefrontIcon',
+    title: 'Built for Local Businesses',
+    description: 'We understand the challenges of running a local business. Our solutions are designed specifically for salons, schools, clinics, pharmacies, restaurants, gyms, and other service businesses.',
+    stat: '10+',
+    statLabel: 'business categories',
   },
   {
     icon: 'CurrencyRupeeIcon',
-    title: 'Affordable & Scalable',
-    description: 'Enterprise-grade solutions at pricing designed for Indian businesses — no compromises.',
-    stat: '40%',
-    statLabel: 'below market rate',
+    title: 'Affordable Monthly Plans',
+    description: 'No heavy upfront payment. Our affordable monthly plans let you start with low risk and continue only when the system is genuinely useful for your business.',
+    stat: '₹3,000',
+    statLabel: 'starting plan',
   },
   {
     icon: 'RocketLaunchIcon',
-    title: 'Fast Project Delivery',
-    description: 'Agile sprints, daily standups, and milestone-based delivery. No missed deadlines.',
-    stat: '2x',
-    statLabel: 'faster than average',
+    title: 'Free Demo & Free Trial',
+    description: 'See the system before committing. We offer a free demo and a 1-month free trial for selected businesses so you can experience the value before signing up.',
+    stat: '1 Month',
+    statLabel: 'free trial*',
   },
   {
     icon: 'HeartIcon',
-    title: 'Dedicated Support',
-    description: 'A dedicated account manager and technical lead assigned to every project from day one.',
-    stat: '24/7',
-    statLabel: 'availability',
+    title: 'Dedicated Monthly Support',
+    description: 'We stay with you as a monthly support partner — maintaining your website, updating your dashboard, and resolving any issues so your business always runs smoothly.',
+    stat: 'Monthly',
+    statLabel: 'support included',
   },
   {
-    icon: 'CpuChipIcon',
-    title: 'Modern Tech Stack',
-    description: 'React, Next.js, Node.js, Python, PostgreSQL, AWS — always using industry-current tools.',
-    stat: '15+',
-    statLabel: 'technologies mastered',
+    icon: 'AdjustmentsHorizontalIcon',
+    title: 'Personalized for Your Business',
+    description: 'Your website and dashboard are set up with your business name, services, contact details, WhatsApp, and branding — not a generic system, but one configured for your business.',
+    stat: '100%',
+    statLabel: 'personalized setup',
   },
   {
     icon: 'ArrowTrendingUpIcon',
-    title: 'Custom Built for Growth',
-    description: 'Architecture designed to scale from 100 to 1 million users — built for your future, not just today.',
-    stat: '10x',
-    statLabel: 'scale-ready systems',
+    title: 'More Enquiries, Better Management',
+    description: 'Go from no online presence to a professional website that brings enquiries — and manage those enquiries, customers, and staff from one simple dashboard.',
+    stat: 'More',
+    statLabel: 'enquiries & visibility',
   },
 ];
 
@@ -70,13 +70,13 @@ export default function WhyChooseUs() {
             <div className="w-8 h-px bg-gradient-to-l from-transparent to-accent" />
           </div>
           <h2 className="text-4xl md:text-5xl font-800 tracking-tight leading-tight text-white">
-            Why Businesses
+            Why Local Business Owners
             <br />
             <span className="text-gradient-cyan">Choose Us</span>
           </h2>
         </div>
 
-        {/* Grid — 3 cols desktop, 2 tablet, 1 mobile */}
+        {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 stagger-group">
           {reasons.map((reason) => (
             <div key={reason.title} className="stagger-child why-card rounded-3xl p-7 opacity-100">
@@ -100,6 +100,9 @@ export default function WhyChooseUs() {
             </div>
           ))}
         </div>
+
+        {/* Bottom note */}
+        <p className="text-center text-white/30 text-xs mt-8">*1-month free trial available for selected businesses. Terms apply.</p>
       </div>
     </section>
   );

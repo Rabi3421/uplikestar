@@ -12,71 +12,64 @@ interface Service {
   accent?: boolean;
 }
 
-// BENTO AUDIT:
-// 7 cards total: Custom Software(cs-2), Website Dev(rs-2), Inventory, ERP/CRM, E-commerce, Automation, Tech Support
-// Row 1: [col-1,2: Custom Software cs-2] [col-3: Website Dev rs-2]
-// Row 2: [col-1: Inventory] [col-2: ERP/CRM] [col-3: OCCUPIED Website Dev]
-// Row 3: [col-1: E-commerce] [col-2: Automation] [col-3: Tech Support]
-// Placed 7/7 ✓
-
 const services: Service[] = [
   {
-    icon: 'CodeBracketIcon',
-    title: 'Custom Software Development',
+    icon: 'GlobeAltIcon',
+    title: 'Professional Business Website',
     description:
-      'End-to-end software built precisely for your business logic — scalable architecture, clean code, and long-term maintainability. React, Node.js, Python, and more.',
-    tags: ['React', 'Node.js', 'Python', 'PostgreSQL'],
-    href: '/services/custom-software-development',
+      'We create and set up a professional website for your business with your name, services, contact details, WhatsApp button, enquiry form, and mobile-friendly design.',
+    tags: ['Mobile-Friendly', 'WhatsApp Integration', 'Enquiry Form', 'SEO Ready'],
+    href: '/services/website-development',
     colSpan: 'lg:col-span-2',
     accent: true,
   },
   {
-    icon: 'GlobeAltIcon',
-    title: 'Website Development',
+    icon: 'CpuChipIcon',
+    title: 'Industry-Specific Management Software',
     description:
-      'Pixel-perfect websites with blazing performance — from corporate portals to marketing sites. SEO-optimised, mobile-first, and conversion-focused.',
-    tags: ['Next.js', 'WordPress', 'Webflow'],
-    href: '/services/website-development',
+      'We provide business management software tailored to your industry — salon, school, clinic, pharmacy, gym, and more — so the dashboard fits exactly how your business works.',
+    tags: ['Salon', 'School', 'Clinic', 'Pharmacy'],
+    href: '/services/custom-software-development',
     rowSpan: 'lg:row-span-2',
   },
   {
-    icon: 'CubeIcon',
-    title: 'Inventory Management Systems',
+    icon: 'InboxArrowDownIcon',
+    title: 'Enquiry & Booking System',
     description:
-      'Real-time stock tracking, multi-warehouse support, purchase orders, and analytics — purpose-built for your supply chain.',
-    tags: ['Real-time', 'Multi-warehouse', 'Analytics'],
-    href: '/services/inventory-management-systems',
-  },
-  {
-    icon: 'ChartBarIcon',
-    title: 'ERP / CRM Solutions',
-    description:
-      'Unified business management: sales pipeline, HR, finance, procurement — in one powerful platform tailored to your workflows.',
-    tags: ['ERP', 'CRM', 'Finance', 'HR'],
-    href: '/services/erp-crm-solutions',
-  },
-  {
-    icon: 'ShoppingCartIcon',
-    title: 'E-commerce Platforms',
-    description:
-      'Full-featured online stores with payment gateways, vendor management, and analytics dashboards built for scale.',
-    tags: ['Multi-vendor', 'Payments', 'Admin Panel'],
-    href: '/services/ecommerce-development',
-  },
-  {
-    icon: 'BoltIcon',
-    title: 'Business Automation',
-    description:
-      'Eliminate manual tasks with intelligent automation — workflow triggers, API integrations, scheduled jobs, and AI-powered processes.',
-    tags: ['Workflow', 'API', 'AI', 'Scheduling'],
+      'Never miss a customer enquiry. Our system captures all enquiries from your website and delivers them to your dashboard for easy tracking and follow-up.',
+    tags: ['Enquiry Capture', 'Booking Requests', 'Status Tracking'],
     href: '/services/business-automation',
   },
   {
-    icon: 'WrenchScrewdriverIcon',
-    title: 'Technical Support & Maintenance',
+    icon: 'UserGroupIcon',
+    title: 'Customer & Staff Management',
     description:
-      'Proactive monitoring, bug fixes, security patches, and feature upgrades — your dedicated tech team, always on.',
-    tags: ['24/7 Support', 'SLA', 'Security'],
+      'Maintain organized customer records, service history, and staff profiles in one place — so your business coordination is simple and efficient.',
+    tags: ['Customer Records', 'Staff Profiles', 'Visit History'],
+    href: '/services/inventory-management-systems',
+  },
+  {
+    icon: 'RectangleStackIcon',
+    title: 'Role-Based Dashboard Access',
+    description:
+      'Give each team member the right dashboard. Owner, staff, receptionist, manager, accountant, and customer roles — each with relevant access and information.',
+    tags: ['Owner Access', 'Staff Access', 'Customer Portal'],
+    href: '/services/erp-crm-solutions',
+  },
+  {
+    icon: 'WrenchScrewdriverIcon',
+    title: 'Monthly Support & Maintenance',
+    description:
+      'We provide monthly maintenance, updates, and technical support for your website and dashboard — so you can focus on your business without worrying about technical issues.',
+    tags: ['Monthly Plan', 'Updates', 'Tech Support'],
+    href: '/services/ecommerce-development',
+  },
+  {
+    icon: 'MagnifyingGlassIcon',
+    title: 'SEO & Online Presence Support',
+    description:
+      'We help your business improve search visibility, set up Google Business Profile, and maintain a strong online presence that brings more customers to your door.',
+    tags: ['Google Business', 'Local SEO', 'Visibility'],
   },
 ];
 
@@ -89,24 +82,22 @@ export default function ServicesSection() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-gradient-to-r from-primary to-accent" />
-              <span className="text-muted-foreground text-xs font-700 uppercase tracking-widest">What We Build</span>
+              <span className="text-muted-foreground text-xs font-700 uppercase tracking-widest">What We Provide</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-800 tracking-tight leading-tight text-foreground">
-              Software Development Services
+              Complete Digital Solutions
               <br />
-              <span className="text-gradient-primary">for Growing Businesses</span>
+              <span className="text-gradient-primary">for Your Business</span>
             </h2>
           </div>
           <p className="text-muted-foreground text-base leading-relaxed max-w-sm">
-            From website development and inventory software to ERP, CRM, and business automation, we build systems that improve efficiency and support scale.
+            From website setup and enquiry management to role-based dashboards and monthly support — we provide everything your business needs to go digital and grow.
           </p>
         </div>
 
         {/* Bento Grid */}
-        {/* Desktop: grid-cols-3 | Mobile: grid-cols-1 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 stagger-group">
           {services.map((service, i) => (
-            /* STEP 4 JSX comment: card index={i} colSpan={service.colSpan} rowSpan={service.rowSpan} */
             <div
               key={service.title}
               className={`stagger-child service-card rounded-3xl p-7 opacity-100 ${service.colSpan || ''} ${service.rowSpan || ''} ${service.accent ? 'bg-gradient-to-br from-primary to-secondary' : ''}`}
@@ -137,7 +128,7 @@ export default function ServicesSection() {
                     key={tag}
                     className={`text-xs font-600 px-3 py-1 rounded-full ${
                       service.accent
-                        ? 'bg-white/15 text-white/80' :'bg-muted text-muted-foreground'
+                        ? 'bg-white/15 text-white/80' : 'bg-muted text-muted-foreground'
                     }`}
                   >
                     {tag}
@@ -169,6 +160,19 @@ export default function ServicesSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* View all CTA */}
+        <div className="mt-10 text-center">
+          <a
+            href="/services"
+            className="inline-flex items-center gap-3 border border-border rounded-full pl-6 pr-2 py-2 hover:border-accent transition-all group"
+          >
+            <span className="text-sm font-600 text-foreground">View All Services</span>
+            <span className="w-9 h-9 rounded-full bg-gradient-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+              <Icon name="ArrowUpRightIcon" size={16} className="text-white" />
+            </span>
+          </a>
         </div>
       </div>
     </section>

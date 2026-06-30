@@ -2,25 +2,19 @@ import { google } from 'googleapis';
 import nodemailer from 'nodemailer';
 import { NextResponse } from 'next/server';
 
+import { createContactEnquiry, updateContactEnquiryDeliveryStatus } from '@/lib/enquiries';
+
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
 
 type ContactPayload = {
   name?: string;
   email?: string;
+  phone?: string;
   company?: string;
   service?: string;
+  city?: string;
   message?: string;
-};
-
-const serviceLabelMap: Record<string, string> = {
-  'custom-software': 'Custom Software Development',
-  website: 'Website Development',
-  inventory: 'Inventory Management System',
-  'erp-crm': 'ERP / CRM Solution',
-  ecommerce: 'E-commerce Platform',
-  automation: 'Business Automation',
-  support: 'Technical Support',
 };
 
 function parseSpreadsheetId() {
@@ -145,32 +139,38 @@ export async function POST(request: Request) {
 
     const name = normalizeValue(body.name);
     const email = normalizeValue(body.email);
+    const phone = normalizeValue(body.phone);
     const company = normalizeValue(body.company);
     const service = normalizeValue(body.service);
+    const city = normalizeValue(body.city);
     const message = normalizeValue(body.message);
 
-    if (!name || !email || !message || name === '-' || email === '-' || message === '-') {
+    if (!name || !message || name === '-' || message === '-') {
       return NextResponse.json(
-        { success: false, message: 'Name, email, and message are required.' },
+        { success: false, message: 'Name and message are required.' },
         { status: 400 },
       );
     }
 
     const timestamp = new Date().toISOString();
-    const serviceLabel = serviceLabelMap[service] || service;
-    const spreadsheetId = parseSpreadsheetId();
-    const spreadsheetRange = process.env.GOOGLE_SHEETS_RANGE || 'Sheet1!A:H';
-
-    const mailer = getMailer();
-    const sender = process.env.GMAIL_USER || 'rnptechsolutionsofficial@gmail.com';
-    const recipient = process.env.CONTACT_TO_EMAIL || 'rnpmech.enggr@gmail.com';
+    const enquiryId = await createContactEnquiry({
+      name,
+      email,
+      phone,
+      company,
+      service,
+      serviceKey: service === '-' ? '' : service,
+      message,
+    });
 
     const subject = `New RNP Tech Solutions enquiry from ${name}`;
     const text = [
       `Name: ${name}`,
+      `Phone: ${phone}`,
       `Email: ${email}`,
-      `Company: ${company}`,
-      `Service: ${serviceLabel}`,
+      `Business Name: ${company}`,
+      `Business Type: ${service}`,
+      `City: ${city}`,
       '',
       'Message:',
       message,
@@ -179,15 +179,19 @@ export async function POST(request: Request) {
     const html = `
       <h2 style="margin:0 0 16px;font-size:20px;">New RNP Tech Solutions Enquiry</h2>
       <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+      <p><strong>Phone:</strong> ${escapeHtml(phone)}</p>
       <p><strong>Email:</strong> ${escapeHtml(email)}</p>
-      <p><strong>Company:</strong> ${escapeHtml(company)}</p>
-      <p><strong>Service:</strong> ${escapeHtml(serviceLabel)}</p>
+      <p><strong>Business Name:</strong> ${escapeHtml(company)}</p>
+      <p><strong>Business Type:</strong> ${escapeHtml(service)}</p>
+      <p><strong>City:</strong> ${escapeHtml(city)}</p>
       <p><strong>Submitted:</strong> ${escapeHtml(timestamp)}</p>
       <div style="margin-top:20px;padding:16px;border:1px solid #e5e7eb;border-radius:12px;white-space:pre-wrap;">${escapeHtml(message)}</div>
     `;
 
     let sheetSaved = false;
     try {
+      const spreadsheetId = parseSpreadsheetId();
+      const spreadsheetRange = process.env.GOOGLE_SHEETS_RANGE || 'Sheet1!A:H';
       const auth = getSheetsAuth();
       const sheets = google.sheets({ version: 'v4', auth });
 
@@ -196,7 +200,7 @@ export async function POST(request: Request) {
         range: spreadsheetRange,
         valueInputOption: 'USER_ENTERED',
         requestBody: {
-          values: [[timestamp, name, email, company, serviceLabel, message, 'Website Contact Form', 'New Lead']],
+          values: [[timestamp, name, phone, email, company, service, city, message, 'Website Contact Form', 'New Lead']],
         },
       });
 
@@ -207,42 +211,44 @@ export async function POST(request: Request) {
 
     let emailSent = false;
     try {
-    await mailer.sendMail({
-      from: `RNP Tech Solutions <${sender}>`,
-      to: recipient,
-      replyTo: email,
-      subject,
-      text,
-      html,
-    });
+      const mailer = getMailer();
+      const sender = process.env.GMAIL_USER || 'rnptechsolutionsofficial@gmail.com';
+      const recipient = process.env.CONTACT_TO_EMAIL || 'rnpmech.enggr@gmail.com';
+
+      await mailer.sendMail({
+        from: `RNP Tech Solutions <${sender}>`,
+        to: recipient,
+        replyTo: email,
+        subject,
+        text,
+        html,
+      });
       emailSent = true;
     } catch (mailError) {
       console.error('Contact email send error:', mailError);
     }
 
+    await updateContactEnquiryDeliveryStatus(enquiryId, { sheetSaved, emailSent });
+
     if (sheetSaved && emailSent) {
       return NextResponse.json({ success: true, message: 'Your enquiry has been submitted successfully.' });
     }
 
-    if (emailSent) {
+    if (emailSent || sheetSaved) {
       return NextResponse.json(
         {
           success: true,
           message:
-            'Your enquiry was emailed successfully, but the Google Sheet save failed. Please check the server configuration.',
+            'Your enquiry has been submitted successfully. Some notification integrations need server configuration review.',
         },
         { status: 207 },
       );
     }
 
-    return NextResponse.json(
-      {
-        success: false,
-        message:
-          'Unable to submit your enquiry right now. Please check the Google service account and Gmail settings, then try again.',
-      },
-      { status: 500 },
-    );
+    return NextResponse.json({
+      success: true,
+      message: 'Your enquiry has been submitted successfully.',
+    });
   } catch (error) {
     console.error('Contact form submission error:', error);
     return NextResponse.json(

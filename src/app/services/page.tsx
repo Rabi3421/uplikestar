@@ -10,14 +10,14 @@ import { siteConfig, siteUrl } from '@/app/seo';
 export const metadata: Metadata = {
   title: 'Services | RNP Tech Solutions',
   description:
-    'Explore RNP Tech Solutions services including website development, custom software development, inventory systems, ERP CRM solutions, e-commerce development, and business automation.',
+    'Explore RNP Tech Solutions services including professional business website setup, business management software, enquiry and booking systems, role-based dashboards, customer and staff management, and monthly support.',
   alternates: {
     canonical: '/services',
   },
   openGraph: {
     title: 'Services | RNP Tech Solutions',
     description:
-      'Explore website development, custom software, inventory systems, ERP CRM, e-commerce, and automation services from RNP Tech Solutions.',
+      'Professional websites and business management systems for salons, schools, clinics, pharmacies, restaurants, gyms, and other local businesses — on affordable monthly plans.',
     url: `${siteUrl}/services`,
     images: [siteConfig.ogImage],
   },
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Services | RNP Tech Solutions',
     description:
-      'Explore website development, custom software, inventory systems, ERP CRM, e-commerce, and automation services from RNP Tech Solutions.',
+      'Professional websites and business management systems for local businesses on affordable monthly plans.',
     images: [siteConfig.ogImage],
   },
 };
@@ -34,10 +34,10 @@ export default function ServicesPage() {
   const schema = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
-    name: 'RNP Tech Solutions',
+    name: 'RNP Tech Solutions Services',
     url: `${siteUrl}/services`,
     description:
-      'Service overview page for RNP Tech Solutions covering websites, custom software, ERP CRM, e-commerce, inventory systems, and automation.',
+      'Service overview page for RNP Tech Solutions covering professional websites, business management software, enquiry systems, role-based dashboards, and monthly support for local businesses.',
   };
 
   return (
@@ -54,11 +54,10 @@ export default function ServicesPage() {
               <span className="text-accent text-xs font-700 uppercase tracking-widest">Our Services</span>
             </div>
             <h1 className="text-[clamp(2.5rem,6vw,4.8rem)] font-800 leading-[1.05] tracking-tight text-white mb-6">
-              Digital Services Built for Real Business Growth
+              Complete Digital Solutions for Local and Small Businesses
             </h1>
             <p className="text-lg md:text-xl text-white/65 leading-relaxed max-w-3xl">
-              Explore dedicated service pages for website development, custom software, inventory systems, ERP CRM,
-              e-commerce, and business automation solutions from RNP Tech Solutions.
+              From professional website setup and enquiry management to role-based dashboards and monthly support — RNP Tech Solutions provides everything your local business needs to go digital and grow.
             </p>
           </div>
         </div>

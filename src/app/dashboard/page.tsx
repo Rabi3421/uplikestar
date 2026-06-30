@@ -24,12 +24,12 @@ const dashboardCards = [
 ];
 
 const sidebarLinks = [
-  { label: 'Overview', icon: 'Squares2X2Icon', active: true },
-  { label: 'Enquiries', icon: 'InboxStackIcon' },
-  { label: 'Projects', icon: 'FolderOpenIcon' },
-  { label: 'Clients', icon: 'UserGroupIcon' },
-  { label: 'Reports', icon: 'ChartBarIcon' },
-  { label: 'Settings', icon: 'Cog6ToothIcon' },
+  { label: 'Overview', icon: 'Squares2X2Icon', href: '/dashboard', active: true },
+  { label: 'Enquiries', icon: 'InboxStackIcon', href: '/dashboard/enquiries' },
+  { label: 'Projects', icon: 'FolderOpenIcon', href: '#' },
+  { label: 'Clients', icon: 'UserGroupIcon', href: '#' },
+  { label: 'Reports', icon: 'ChartBarIcon', href: '#' },
+  { label: 'Settings', icon: 'Cog6ToothIcon', href: '#' },
 ];
 
 const projectRows = [
@@ -61,164 +61,156 @@ export default async function DashboardPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#F4F6FF]">
-      <div className="min-h-screen lg:pl-[280px]">
-        <aside className="fixed inset-y-0 left-0 z-50 hidden w-[280px] border-r border-white/10 bg-[#070822] lg:flex lg:flex-col">
-          <div className="border-b border-white/10 px-7 py-6">
+    <main className="min-h-screen overflow-x-hidden bg-[#EEF2F8]">
+      <div className="min-h-screen w-full overflow-x-hidden lg:pl-[280px]">
+        <aside className="fixed inset-y-0 left-0 z-50 hidden w-[280px] border-r border-[#20234A] bg-[#070A20] lg:flex lg:flex-col">
+          <div className="border-b border-[#20234A] px-7 py-6">
             <a href="/" aria-label="RNP Tech Solutions home" className="inline-flex">
               <AppLogo width={230} height={50} imageClassName="h-11 w-auto" />
             </a>
           </div>
 
           <nav className="min-h-0 flex-1 overflow-y-auto px-4 py-6" aria-label="Dashboard navigation">
-            <p className="px-3 pb-3 text-[11px] font-800 uppercase tracking-widest text-white/55">Workspace</p>
-            <div className="space-y-1">
+            <p className="px-3 pb-3 text-[11px] font-800 uppercase tracking-widest text-[#AEB7D3]">Workspace</p>
+            <div className="space-y-1.5">
               {sidebarLinks.map((link) => (
                 <a
                   key={link.label}
-                  href={link.active ? '/dashboard' : '#'}
+                  href={link.href}
                   aria-current={link.active ? 'page' : undefined}
-                  className={`flex items-center gap-3 rounded-2xl px-4 py-3 text-sm font-700 transition ${
+                  className={`flex items-center gap-3 rounded-[8px] px-4 py-3 text-sm font-700 transition ${
                     link.active
                       ? 'bg-white text-primary shadow-sm'
-                      : 'text-white/82 hover:bg-white/[0.08] hover:text-white'
+                      : 'text-[#D7DDF0] hover:bg-white/[0.08] hover:text-white'
                   }`}
                 >
-                  <Icon name={link.icon as Parameters<typeof Icon>[0]['name']} size={19} className={link.active ? 'text-primary' : 'text-white/68'} />
+                  <Icon name={link.icon as Parameters<typeof Icon>[0]['name']} size={19} className={link.active ? 'text-primary' : 'text-[#AEB7D3]'} />
                   <span>{link.label}</span>
                 </a>
               ))}
             </div>
           </nav>
 
-          <div className="shrink-0 p-4">
-            <div className="rounded-3xl border border-white/10 bg-white/[0.06] p-4">
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-2xl bg-accent/15">
-                <Icon name="ShieldCheckIcon" size={20} className="text-accent" />
-              </div>
-              <p className="text-sm font-800 text-white">Admin session</p>
-              <p className="mt-1 break-all text-xs leading-5 text-white/50">{email}</p>
-              <LogoutButton className="mt-4 w-full" />
-            </div>
-          </div>
         </aside>
 
-        <section className="min-w-0">
-          <header className="sticky top-0 z-40 border-b border-border bg-white/90 px-5 py-4 backdrop-blur-xl md:px-8">
+        <section className="min-w-0 overflow-x-hidden">
+          <header className="sticky top-0 z-40 border-b border-[#D5DCEB] bg-white/95 px-5 py-4 backdrop-blur-xl md:px-8">
             <div className="flex items-center justify-between gap-4">
               <a href="/" aria-label="RNP Tech Solutions home" className="inline-flex lg:hidden">
                 <AppLogo width={210} height={46} imageClassName="h-10 w-auto" />
               </a>
-              <div className="hidden min-w-0 flex-1 items-center gap-3 rounded-full border border-border bg-[#F8F9FF] px-4 py-3 lg:flex">
-                <Icon name="MagnifyingGlassIcon" size={18} className="text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Search enquiries, projects, clients...</span>
+              <div className="hidden min-w-0 flex-1 items-center gap-3 rounded-[8px] border border-[#CCD5E6] bg-[#F8FAFC] px-4 py-3 lg:flex">
+                <Icon name="MagnifyingGlassIcon" size={18} className="text-[#475569]" />
+                <span className="text-sm font-600 text-[#64748B]">Search enquiries, projects, clients...</span>
               </div>
               <div className="flex items-center gap-3">
-                <div className="hidden items-center gap-3 rounded-full border border-border bg-white px-4 py-2 shadow-sm md:flex">
+                <div className="hidden items-center gap-3 rounded-[8px] border border-[#CCD5E6] bg-white px-4 py-2 shadow-sm md:flex">
                   <span className="h-2.5 w-2.5 rounded-full bg-green-500" />
                   <span className="text-sm font-700 text-foreground">Online</span>
                 </div>
-                <LogoutButton variant="light" className="hidden sm:inline-flex" />
+                <LogoutButton variant="light" />
               </div>
             </div>
           </header>
 
-          <div className="px-5 py-8 md:px-8 md:py-10">
-            <div className="mx-auto max-w-7xl">
-              <div className="mb-8 flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
+          <div className="w-full max-w-full px-5 py-8 md:px-8 md:py-10">
+            <div className="mx-auto w-full max-w-[1440px] min-w-0">
+              <div className="mb-7 flex flex-col gap-5 xl:flex-row xl:items-end xl:justify-between">
                 <div>
-                  <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-primary/15 bg-white px-4 py-2 shadow-sm">
+                  <div className="mb-4 inline-flex items-center gap-2 rounded-[8px] border border-[#D7D3EA] bg-white px-4 py-2 shadow-sm">
                     <Icon name="ShieldCheckIcon" size={16} className="text-primary" />
                     <span className="text-primary text-xs font-800 uppercase tracking-widest">Authenticated Admin</span>
                   </div>
-                  <h1 className="text-4xl md:text-5xl font-800 tracking-tight text-foreground mb-3">
+                  <h1 className="mb-3 text-4xl font-800 tracking-tight text-foreground md:text-[44px]">
                     Dashboard Overview
                   </h1>
-                  <p className="max-w-2xl text-muted-foreground leading-relaxed">
+                  <p className="max-w-2xl text-base font-600 leading-8 text-[#52627A]">
                     Welcome, {email}. Monitor enquiries, projects, and internal activity from one protected workspace.
                   </p>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                  <a href="/contact" className="inline-flex items-center justify-center gap-2 rounded-full border border-border bg-white px-5 py-3 text-sm font-800 text-foreground shadow-sm hover:border-primary/35 hover:text-primary">
+                  <a href="/contact" className="inline-flex items-center justify-center gap-2 rounded-[8px] border border-[#CCD5E6] bg-white px-5 py-3 text-sm font-800 text-foreground shadow-sm hover:border-[#8F86C7] hover:text-primary">
                     <Icon name="EyeIcon" size={17} />
                     <span>View public contact</span>
                   </a>
-                  <button type="button" className="btn-primary inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-800">
+                  <button type="button" className="btn-primary inline-flex items-center justify-center gap-2 rounded-[8px] px-5 py-3 text-sm font-800">
                     <span>New internal note</span>
                     <Icon name="PlusIcon" size={17} className="text-white" />
                   </button>
                 </div>
               </div>
 
-              <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              <div className="grid min-w-0 gap-4 md:grid-cols-2 xl:grid-cols-4">
                 {dashboardCards.map((card) => (
-                  <article key={card.label} className="rounded-3xl border border-border bg-white p-6 shadow-sm">
+                  <article key={card.label} className="rounded-[8px] border border-[#D7DEEA] bg-white p-5 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
                     <div className="mb-6 flex items-start justify-between gap-4">
-                      <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-primary">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-[8px] bg-gradient-primary">
                         <Icon name={card.icon as Parameters<typeof Icon>[0]['name']} size={22} className="text-white" />
                       </div>
-                      <span className="rounded-full bg-green-50 px-3 py-1 text-xs font-800 text-green-700">{card.helper}</span>
+                      <span className="rounded-[6px] bg-green-50 px-3 py-1 text-xs font-800 text-green-700">{card.helper}</span>
                     </div>
-                    <p className="text-3xl font-800 text-foreground">{card.value}</p>
-                    <p className="mt-1 text-sm font-600 text-muted-foreground">{card.label}</p>
+                    <p className="text-3xl font-800 text-[#111827]">{card.value}</p>
+                    <p className="mt-1 text-sm font-700 text-[#52627A]">{card.label}</p>
                   </article>
                 ))}
               </div>
 
-              <div className="mt-6 grid gap-4 xl:grid-cols-[1fr_380px]">
-                <article className="rounded-3xl border border-border bg-white p-6 shadow-sm">
+              <div className="mt-6 grid min-w-0 gap-4 xl:grid-cols-[minmax(0,1fr)_360px] 2xl:grid-cols-[minmax(0,1fr)_380px]">
+                <article className="min-w-0 rounded-[8px] border border-[#D7DEEA] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
                   <div className="mb-5 flex items-center justify-between gap-4">
                     <div>
                       <h2 className="text-2xl font-800 text-foreground">Project Pipeline</h2>
-                      <p className="mt-1 text-sm text-muted-foreground">Demo project records for the internal workspace.</p>
+                      <p className="mt-1 text-sm font-600 text-[#52627A]">Demo project records for the internal workspace.</p>
                     </div>
-                    <Icon name="EllipsisHorizontalIcon" size={22} className="text-muted-foreground" />
+                    <Icon name="EllipsisHorizontalIcon" size={22} className="text-[#52627A]" />
                   </div>
 
-                  <div className="overflow-hidden rounded-2xl border border-border">
-                    <div className="grid grid-cols-[1.1fr_1fr_140px_90px] bg-[#F8F9FF] px-4 py-3 text-xs font-800 uppercase tracking-widest text-muted-foreground">
-                      <span>Client</span>
-                      <span>Service</span>
-                      <span>Status</span>
-                      <span>Due</span>
-                    </div>
-                    {projectRows.map((row) => (
-                      <div key={row.client} className="grid grid-cols-[1.1fr_1fr_140px_90px] items-center border-t border-border px-4 py-4 text-sm">
-                        <span className="font-800 text-foreground">{row.client}</span>
-                        <span className="text-muted-foreground">{row.service}</span>
-                        <span>
-                          <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-800 text-primary">{row.status}</span>
-                        </span>
-                        <span className="font-700 text-muted-foreground">{row.date}</span>
+                  <div className="max-w-full overflow-x-auto rounded-[8px] border border-[#D7DEEA]">
+                    <div className="min-w-[640px]">
+                      <div className="grid grid-cols-[1.1fr_1fr_140px_90px] bg-[#F1F5F9] px-4 py-3 text-xs font-800 uppercase tracking-widest text-[#52627A]">
+                        <span>Client</span>
+                        <span>Service</span>
+                        <span>Status</span>
+                        <span>Due</span>
                       </div>
-                    ))}
+                      {projectRows.map((row) => (
+                        <div key={row.client} className="grid grid-cols-[1.1fr_1fr_140px_90px] items-center border-t border-[#D7DEEA] px-4 py-4 text-sm">
+                          <span className="font-800 text-[#111827]">{row.client}</span>
+                          <span className="font-600 text-[#52627A]">{row.service}</span>
+                          <span>
+                            <span className="rounded-[6px] bg-[#ECEAF7] px-3 py-1 text-xs font-800 text-primary">{row.status}</span>
+                          </span>
+                          <span className="font-700 text-[#52627A]">{row.date}</span>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </article>
 
-                <div className="grid gap-4">
-                  <article className="rounded-3xl border border-border bg-white p-6 shadow-sm">
-                    <h2 className="text-2xl font-800 text-foreground mb-5">Recent Activity</h2>
+                <div className="grid min-w-0 gap-4">
+                  <article className="rounded-[8px] border border-[#D7DEEA] bg-white p-6 shadow-[0_10px_30px_rgba(15,23,42,0.06)]">
+                    <h2 className="mb-5 text-2xl font-800 text-foreground">Recent Activity</h2>
                     <div className="space-y-3">
                       {activityItems.map((item) => (
-                        <div key={item.title} className="flex items-start gap-3 rounded-2xl bg-[#F8F9FF] px-4 py-3">
-                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white shadow-sm">
+                        <div key={item.title} className="flex items-start gap-3 rounded-[8px] border border-[#E2E8F0] bg-[#F8FAFC] px-4 py-3">
+                          <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-[8px] bg-white shadow-sm">
                             <Icon name={item.icon as Parameters<typeof Icon>[0]['name']} size={18} className="text-primary" />
                           </div>
                           <div>
-                            <p className="text-sm font-800 text-foreground">{item.title}</p>
-                            <p className="mt-0.5 text-xs font-600 text-muted-foreground">{item.meta}</p>
+                            <p className="text-sm font-800 leading-6 text-[#111827]">{item.title}</p>
+                            <p className="mt-0.5 text-xs font-700 text-[#52627A]">{item.meta}</p>
                           </div>
                         </div>
                       ))}
                     </div>
                   </article>
 
-                  <article className="rounded-3xl border border-white/10 bg-gradient-hero p-6 shadow-premium">
-                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10">
+                  <article className="rounded-[8px] border border-[#3D367A] bg-gradient-hero p-6 shadow-[0_18px_45px_rgba(15,23,42,0.18)]">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-[8px] bg-[#241C68]">
                       <Icon name="LockClosedIcon" size={21} className="text-accent" />
                     </div>
-                    <h2 className="text-2xl font-800 text-white mb-3">Access Policy</h2>
-                    <p className="text-white/68 text-sm leading-relaxed">
+                    <h2 className="mb-3 text-2xl font-800 text-white">Access Policy</h2>
+                    <p className="text-sm font-600 leading-7 text-[#DCE6FF]">
                       This dashboard is protected by HTTP-only access and refresh cookies. Tokens are not stored in browser storage.
                     </p>
                   </article>

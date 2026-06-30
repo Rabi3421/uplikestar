@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useEffect, useMemo, useState } from 'react';
-import { usePathname } from 'next/navigation';
 
 import { servicePages } from '@/app/services/servicePages';
 import AppImage from '@/components/ui/AppImage';
@@ -9,55 +8,43 @@ import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 
 const primaryLinks = [
-//   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-//   { label: 'Portfolio', href: '/portfolio' },
-  { label: 'Testimonials', href: '/testimonials' },
+  { label: 'Industries', href: '/industries' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'Contact', href: '/contact' },
-];
-
-const pageLinks = [
-  { label: 'About Us', href: '/about', description: 'Company overview and delivery approach' },
-  { label: 'Case Studies', href: '/case-studies', description: 'Examples of project outcomes and impact' },
-  { label: 'Industries', href: '/industries', description: 'How we tailor solutions for different sectors' },
-  { label: 'FAQ', href: '/faq', description: 'Answers to common service and process questions' },
-  { label: 'Privacy Policy', href: '/privacy-policy', description: 'Information handling and privacy practices' },
-  { label: 'Terms & Conditions', href: '/terms-and-conditions', description: 'General website and engagement terms' },
 ];
 
 const serviceImages = {
   'website-development': {
     src: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=240&q=80',
-    alt: 'Website development workspace with code on laptop',
+    alt: 'Professional business website on a laptop screen',
   },
   'custom-software-development': {
     src: 'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=240&q=80',
-    alt: 'Software team collaborating around a laptop',
+    alt: 'Business management dashboard on a screen',
   },
   'inventory-management-systems': {
     src: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=240&q=80',
-    alt: 'Warehouse inventory and logistics shelves',
+    alt: 'Customer and staff management interface',
   },
   'business-automation': {
     src: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=240&q=80',
-    alt: 'Business team planning automation workflow',
+    alt: 'Enquiry and booking management system',
   },
   'erp-crm-solutions': {
     src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=240&q=80',
-    alt: 'Analytics dashboard for ERP and CRM reporting',
+    alt: 'Role-based business dashboard overview',
   },
   'ecommerce-development': {
     src: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=240&q=80',
-    alt: 'E-commerce shopping and online payment screen',
+    alt: 'Monthly support and maintenance service',
   },
 } as const;
 
 export default function Header() {
-  const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isScrolled, setIsScrolled] = useState(false);
-  const isHomePage = pathname === '/';
 
   const serviceLinks = useMemo(
     () => [{ label: 'All Services', href: '/services', description: 'Browse all RNP Tech Solutions service categories', image: undefined }, ...servicePages.map((service) => ({
@@ -79,7 +66,6 @@ export default function Header() {
   };
 
   const closeDropdowns = () => setActiveDropdown(null);
-  const shouldUseSolidNav = !isHomePage || isScrolled;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -113,7 +99,7 @@ export default function Header() {
       `}</style>
       <nav
         id="main-nav"
-        className="fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-5"
+        className={`fixed top-0 left-0 w-full z-[100] px-6 md:px-12 py-5${isScrolled ? ' nav-scrolled' : ''}`}
         role="navigation"
         aria-label="Main navigation"
       >
@@ -257,7 +243,7 @@ export default function Header() {
               href="/contact"
               className="btn-primary px-6 py-2.5 rounded-full text-sm font-600 inline-flex items-center gap-2"
             >
-              <span>Start Project</span>
+              <span>Get Free Demo</span>
               <Icon name="ArrowUpRightIcon" size={16} className="text-white" />
             </a>
           </div>
@@ -343,7 +329,7 @@ export default function Header() {
               onClick={handleLinkClick}
               className="btn-primary px-8 py-3 rounded-full text-base font-600 mt-2 inline-flex items-center justify-center gap-2"
             >
-              <span>Start Project</span>
+              <span>Get Free Demo</span>
               <Icon name="ArrowUpRightIcon" size={18} className="text-white" />
             </a>
           </div>

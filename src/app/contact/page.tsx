@@ -9,30 +9,30 @@ import { servicePages } from '@/app/services/servicePages';
 import { siteConfig, siteUrl } from '@/app/seo';
 
 export const metadata: Metadata = {
-  title: 'Contact RNP Tech Solutions | Software, Website and Automation Consultation',
+  title: 'Contact RNP Tech Solutions | Get Free Demo for Your Business',
   description:
-    'Contact RNP Tech Solutions for website development, custom software, ERP CRM solutions, inventory systems, e-commerce development, and business automation consultation.',
+    'Contact RNP Tech Solutions to get a free demo of our professional website and business management system. We serve salons, schools, clinics, pharmacies, restaurants, gyms, and other local businesses.',
   keywords: [
-    'contact software development company',
-    'contact website development company Noida',
-    'software consultation Noida',
-    'business automation consultation India',
+    'contact RNP Tech Solutions',
+    'get free demo business website India',
+    'local business website consultation',
+    'business management system free trial India',
   ],
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
-    title: 'Contact RNP Tech Solutions',
+    title: 'Contact RNP Tech Solutions | Get Free Demo',
     description:
-      'Speak with RNP Tech Solutions about custom software, websites, ERP CRM systems, inventory management, e-commerce, and automation solutions.',
+      'Get a free demo of our professional website and business management system for your local business. No commitment required.',
     url: `${siteUrl}/contact`,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact RNP Tech Solutions',
+    title: 'Contact RNP Tech Solutions | Get Free Demo',
     description:
-      'Book a consultation for software development, websites, ERP CRM, inventory systems, e-commerce, and automation.',
+      'Get a free demo of our professional website and business management system for your local business.',
     images: [siteConfig.ogImage],
   },
 };
@@ -46,7 +46,7 @@ export default function ContactPage() {
         name: 'Contact RNP Tech Solutions',
         url: `${siteUrl}/contact`,
         description:
-          'Contact RNP Tech Solutions for software development, website development, ERP CRM solutions, e-commerce, inventory systems, and business automation services.',
+          'Contact RNP Tech Solutions for a free demo of our professional website and business management system for local businesses.',
       },
       {
         '@type': 'Organization',
@@ -77,16 +77,16 @@ export default function ContactPage() {
               <span className="text-accent text-xs font-700 uppercase tracking-widest">Contact RNP Tech Solutions</span>
             </div>
             <h1 className="text-[clamp(2.5rem,6vw,4.8rem)] font-800 leading-[1.05] tracking-tight text-white mb-6">
-              Talk to RNP Tech Solutions About Software, Websites, ERP, E-commerce, and Automation
+              Let&apos;s Build Your Business Digital System
             </h1>
             <p className="text-lg md:text-xl text-white/65 leading-relaxed max-w-3xl mb-10">
-              Share your business goals, current bottlenecks, or project scope. We will guide you toward the most practical digital solution and respond with a tailored plan.
+              Tell us about your business and we will suggest the right website and management solution for you. Free demo available — no commitment required.
             </p>
             <div className="grid sm:grid-cols-3 gap-4 max-w-3xl">
               {[
                 { icon: 'PhoneIcon', label: 'Call Us', value: siteConfig.phone },
                 { icon: 'EnvelopeIcon', label: 'Email', value: siteConfig.email },
-                { icon: 'MapPinIcon', label: 'Office', value: 'Noida, Uttar Pradesh' },
+                { icon: 'ChatBubbleLeftIcon', label: 'WhatsApp', value: 'Chat with us' },
               ].map((item) => (
                 <div key={item.label} className="glass-card rounded-3xl p-5">
                   <Icon name={item.icon as Parameters<typeof Icon>[0]['name']} size={20} className="text-accent mb-3" />
@@ -104,24 +104,24 @@ export default function ContactPage() {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-8 h-px bg-gradient-to-r from-primary to-accent" />
-              <span className="text-muted-foreground text-xs font-700 uppercase tracking-widest">Why Contact Us</span>
+              <span className="text-muted-foreground text-xs font-700 uppercase tracking-widest">We Help These Businesses</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-800 tracking-tight leading-tight text-foreground mb-6">
-              A Clear Starting Point for Your Next Digital Project
+              Whether you run a salon, school, clinic, or any local business — we have a solution for you
             </h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Whether you need a website development company in Noida, a custom software development partner, an ERP CRM solution, an inventory management system, an e-commerce platform, or business automation services, RNP Tech Solutions helps you define the right scope before development begins.
+              RNP Tech Solutions creates and sets up professional websites and business management systems for local businesses across India. We configure your website and dashboard with your business details, services, contact information, and WhatsApp integration — ready to receive enquiries from day one.
             </p>
           </div>
           <div className="bg-card border border-border rounded-3xl p-8 shadow-sm">
-            <h3 className="text-2xl font-800 text-foreground mb-5">Popular Consultation Topics</h3>
+            <h3 className="text-2xl font-800 text-foreground mb-5">Our Services</h3>
             <div className="space-y-4">
               {servicePages.map((service) => (
                 <a key={service.slug} href={service.path} className="flex items-start gap-3 hover:opacity-80 transition-opacity">
                   <Icon name="ArrowRightIcon" size={18} className="text-primary mt-0.5" />
                   <div>
                     <p className="text-foreground font-700">{service.shortLabel}</p>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{service.metaDescription}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed line-clamp-2">{service.metaDescription}</p>
                   </div>
                 </a>
               ))}

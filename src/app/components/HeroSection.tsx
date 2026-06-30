@@ -1,226 +1,270 @@
+'use client';
+
 import React from 'react';
-import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import { siteConfig } from '@/app/seo';
 
-const techStack = ['Next.js', 'React', 'Node.js', 'Python', 'PostgreSQL', 'AWS'];
+const businessTypes = ['Salon', 'School', 'Clinic', 'Pharmacy', 'Gym', 'Restaurant', 'Retail'];
 
-const recentProjects = [
-  { name: 'Inventory ERP', status: 'Delivered', color: '#22c55e' },
-  { name: 'E-commerce Portal', status: 'Live', color: '#00D4FF' },
-  { name: 'CRM System', status: 'In Progress', color: '#a78bfa' },
+const featureRows = [
+  { icon: 'GlobeAltIcon', name: 'Business Website', status: 'Active', color: '#22c55e' },
+  { icon: 'InboxArrowDownIcon', name: 'Enquiry System', status: 'Live', color: '#00D4FF' },
+  { icon: 'UserGroupIcon', name: 'Staff & Customer Management', status: 'Ready', color: '#a78bfa' },
+  { icon: 'ChartBarIcon', name: 'Owner Dashboard', status: 'Setup', color: '#f472b6' },
+];
+
+const stats = [
+  { value: 'Free', label: 'Demo' },
+  { value: '1 Month', label: 'Free Trial*' },
+  { value: '₹3,000', label: 'Starting / mo' },
+  { value: '24/7', label: 'Support' },
 ];
 
 export default function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen overflow-hidden bg-gradient-hero px-6 md:px-12"
-      style={{ borderBottomLeftRadius: '80px' }}>
-
-      {/* Background image */}
-      <AppImage
-        src="https://images.unsplash.com/photo-1731534134483-c45d1c8ae3c2"
-        alt="Software development company workspace"
-        fill
-        priority
-        className="object-cover opacity-20"
-        sizes="100vw" />
-
-      {/* Gradient overlays */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A2E]/95 via-[#1B1464]/75 to-[#0D0D1A]/85" />
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A2E] via-transparent to-transparent" />
-
-      {/* Decorative blobs */}
+      className="relative w-full overflow-hidden bg-[#050516]"
+      style={{ height: '100svh', maxHeight: '100svh' }}
+    >
+      {/* Background gradients */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A2E] via-[#0D0B2A] to-[#050516]" />
       <div
-        className="absolute top-1/3 right-1/4 w-[500px] h-[500px] opacity-15 animate-blob pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #6B21A8 0%, transparent 65%)', filter: 'blur(80px)' }}
-        aria-hidden="true" />
-      <div
-        className="absolute bottom-1/4 left-1/4 w-[350px] h-[350px] opacity-10 animate-blob pointer-events-none"
-        style={{ background: 'radial-gradient(circle, #00D4FF 0%, transparent 65%)', filter: 'blur(90px)', animationDelay: '-5s' }}
-        aria-hidden="true" />
+        className="absolute inset-0 opacity-30 pointer-events-none"
+        style={{
+          backgroundImage:
+            'radial-gradient(ellipse 80% 60% at 60% 0%, rgba(107,33,168,0.35) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 20% 80%, rgba(0,212,255,0.18) 0%, transparent 60%)',
+        }}
+        aria-hidden="true"
+      />
+      {/* Subtle grid */}
+      <div className="absolute inset-0 grid-bg opacity-20" aria-hidden="true" />
 
-      {/* Grid pattern */}
-      <div className="absolute inset-0 grid-bg opacity-25" aria-hidden="true" />
-
-      {/* Hero Content */}
-      <div className="relative z-10 max-w-7xl mx-auto pt-32 pb-20 md:pt-40 md:pb-28 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-16 items-center w-full">
+      {/* Main layout */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12 h-full flex items-center">
+        <div className="w-full grid lg:grid-cols-[1fr_480px] xl:grid-cols-[1fr_500px] gap-10 xl:gap-16 items-center pt-24 pb-6 md:pt-24 md:pb-8">
 
           {/* ── LEFT COLUMN ── */}
-          <div className="flex flex-col">
-            {/* Eyebrow badge */}
-            <div className="inline-flex items-center gap-2 w-fit rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 mb-7">
+          <div className="flex flex-col gap-0">
+
+            {/* Eyebrow */}
+            <div className="inline-flex items-center gap-2 w-fit rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse" />
-              <span className="text-accent text-[11px] font-700 uppercase tracking-widest">
-                #1 SOFTWARE & WEB SOLUTIONS PARTNER
+              <span className="text-accent text-[11px] font-700 uppercase tracking-[0.18em]">
+                Digital Solutions for Local Businesses
               </span>
             </div>
 
             {/* Headline */}
-            <h1 className="text-[clamp(2.4rem,4.6vw,4.2rem)] font-800 leading-[1.08] tracking-tight text-white mb-5">
-              We Build Software{' '}
+            <h1 className="font-800 leading-[1.07] tracking-tight text-white mb-4"
+              style={{ fontSize: 'clamp(2rem, 3.8vw, 3.6rem)' }}>
+              Professional{' '}
               <span
-                className="inline-block whitespace-nowrap"
                 style={{
-                  background: 'linear-gradient(90deg, #00D4FF 0%, #a78bfa 60%, #f472b6 100%)',
+                  background: 'linear-gradient(90deg, #00D4FF 0%, #a78bfa 55%, #f472b6 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
                   backgroundClip: 'text',
-                  display: 'inline',
                 }}>
-                That Drives Growth
-              </span>
+                Websites &amp; Systems
+              </span>{' '}
+              for Every Local Business
             </h1>
 
-            {/* Sub headline chips */}
+            {/* Sub */}
+            <p className="text-white/55 text-sm md:text-base leading-relaxed max-w-[540px] mb-5">
+              We set up your business website, enquiry system, and management dashboard — personalised for your business, live in days, on a simple monthly plan.
+            </p>
+
+            {/* Business type chips */}
             <div className="flex flex-wrap gap-2 mb-6">
-              {['Web Development', 'Custom Software', 'Inventory & ERP', 'Business Automation'].map((tag) => (
+              {businessTypes.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-600 text-white/70 border border-white/15 rounded-full px-3 py-1 bg-white/5">
+                  className="text-xs font-600 text-white/65 border border-white/12 rounded-full px-3 py-1 bg-white/[0.04] hover:border-accent/40 hover:text-white transition-colors">
                   {tag}
                 </span>
               ))}
+              <span className="text-xs font-600 text-accent border border-accent/30 rounded-full px-3 py-1 bg-accent/10">
+                + More
+              </span>
             </div>
 
-            {/* Description */}
-            <p className="text-base md:text-lg text-white/55 font-400 leading-relaxed max-w-xl mb-10">
-              RNP Tech Solutions helps businesses modernize with scalable websites, custom software,
-              inventory management systems, CRM/ERP solutions, and end-to-end automation — built for
-              long-term growth.
-            </p>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-3 mb-7">
               <a
-                href="#contact"
-                className="btn-primary px-7 py-3.5 rounded-full text-sm font-700 inline-flex items-center justify-center gap-2 shadow-lg shadow-accent/20">
-                <span>Start Your Project</span>
+                href="/contact"
+                className="btn-primary px-7 py-3 rounded-full text-sm font-700 inline-flex items-center justify-center gap-2"
+                style={{ boxShadow: '0 0 28px rgba(0,212,255,0.22)' }}>
+                <span>Get Free Demo</span>
                 <Icon name="ArrowRightIcon" size={16} className="text-white" />
               </a>
               <a
-                href="#portfolio"
-                className="btn-outline px-7 py-3.5 rounded-full text-sm font-700 inline-flex items-center justify-center gap-2">
-                <span>View Our Work</span>
-                <Icon name="ChevronRightIcon" size={16} />
+                href={`https://wa.me/${siteConfig.whatsapp}?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20business%20website%20and%20management%20system.`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline px-7 py-3 rounded-full text-sm font-700 inline-flex items-center justify-center gap-2">
+                <Icon name="ChatBubbleLeftIcon" size={16} />
+                <span>Talk on WhatsApp</span>
               </a>
             </div>
 
-            {/* Stats bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-8 border-t border-white/10">
-              {[
-                { value: '150+', label: 'Projects' },
-                { value: '80+', label: 'Clients' },
-                { value: '6+', label: 'Years' },
-                { value: '99%', label: 'Satisfaction' },
-              ].map((s) => (
-                <div key={s.label} className="text-center">
-                  <span className="block text-2xl font-800 text-white mb-0.5">{s.value}</span>
-                  <span className="text-white/40 text-xs font-500 uppercase tracking-wider">{s.label}</span>
+            {/* Stats strip */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+              {stats.map((s) => (
+                <div
+                  key={s.label}
+                  className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2.5 text-center backdrop-blur-sm">
+                  <span className="block text-lg font-800 text-white mb-0.5">{s.value}</span>
+                  <span className="text-white/40 text-[10px] font-500 uppercase tracking-wider">{s.label}</span>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* ── RIGHT COLUMN — Dashboard Card ── */}
-          <div className="hidden lg:block -mt-20">
-            <div
-              className="rounded-3xl border border-white/10 bg-white/[0.04] backdrop-blur-xl overflow-hidden shadow-2xl shadow-black/40"
-              style={{ boxShadow: '0 0 80px rgba(0,212,255,0.08), 0 25px 50px rgba(0,0,0,0.5)' }}>
+          {/* ── RIGHT COLUMN — Dashboard Mockup ── */}
+          <div className="hidden lg:block relative">
 
-              {/* Card header bar */}
-              <div className="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-white/[0.03]">
-                <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-red-500/70" />
-                  <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
-                  <span className="w-3 h-3 rounded-full bg-green-500/70" />
+            {/* Glow behind card */}
+            <div
+              className="absolute inset-0 rounded-3xl pointer-events-none"
+              style={{
+                background: 'radial-gradient(ellipse 70% 60% at 50% 40%, rgba(0,212,255,0.12) 0%, transparent 70%)',
+                filter: 'blur(24px)',
+              }}
+              aria-hidden="true"
+            />
+
+            {/* Floating badge — top left */}
+            <div className="absolute -top-4 -left-8 z-20 flex items-center gap-2.5 rounded-2xl border border-white/12 bg-[#0D1040]/90 backdrop-blur-xl px-4 py-2.5 shadow-xl">
+              <div className="w-8 h-8 rounded-xl bg-emerald-400/15 flex items-center justify-center shrink-0">
+                <Icon name="CheckBadgeIcon" size={16} className="text-emerald-400" />
+              </div>
+              <div>
+                <p className="text-white text-xs font-700 leading-none mb-0.5">Free Demo</p>
+                <p className="text-white/40 text-[10px] leading-none">No commitment needed</p>
+              </div>
+            </div>
+
+            {/* Floating badge — bottom right */}
+            <div className="absolute -bottom-4 -right-5 z-20 flex items-center gap-2.5 rounded-2xl border border-accent/20 bg-[#0D1040]/90 backdrop-blur-xl px-4 py-2.5 shadow-xl">
+              <div className="w-8 h-8 rounded-xl bg-accent/15 flex items-center justify-center shrink-0">
+                <Icon name="CurrencyRupeeIcon" size={16} className="text-accent" />
+              </div>
+              <div>
+                <p className="text-accent text-xs font-700 leading-none mb-0.5">₹3,000 / month</p>
+                <p className="text-white/40 text-[10px] leading-none">Starting plan</p>
+              </div>
+            </div>
+
+            {/* Main dashboard card */}
+            <div
+              className="relative rounded-[28px] border border-white/10 bg-[#080B2A] overflow-hidden"
+              style={{ boxShadow: '0 0 0 1px rgba(255,255,255,0.06), 0 32px 64px rgba(0,0,0,0.6)' }}>
+
+              {/* Window chrome */}
+              <div className="flex items-center justify-between px-5 py-3 border-b border-white/[0.07] bg-white/[0.02]">
+                <div className="flex items-center gap-1.5">
+                  <span className="w-3 h-3 rounded-full bg-red-400/80" />
+                  <span className="w-3 h-3 rounded-full bg-yellow-400/80" />
+                  <span className="w-3 h-3 rounded-full bg-green-400/80" />
                 </div>
-                <span className="text-white/30 text-xs font-500">rnp-tech dashboard</span>
+                <div className="flex items-center gap-2 rounded-lg bg-white/[0.06] border border-white/[0.08] px-3 py-1">
+                  <span className="text-white/35 text-[11px] font-500">rnptechsolutions.com/dashboard</span>
+                </div>
                 <div className="flex items-center gap-1.5">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-emerald-400 text-[11px] font-600">LIVE</span>
+                  <span className="text-emerald-400 text-[11px] font-600 uppercase tracking-wider">Live</span>
                 </div>
               </div>
 
-              <div className="p-5 space-y-4">
-                {/* Availability row */}
-                <div className="flex items-center justify-between rounded-2xl bg-white/[0.05] border border-white/10 px-4 py-3">
+              <div className="p-4 space-y-2.5">
+
+                {/* Welcome row */}
+                <div className="flex items-center justify-between rounded-2xl bg-gradient-to-r from-accent/[0.12] to-purple-500/[0.08] border border-accent/15 px-4 py-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-accent/20 flex items-center justify-center">
-                      <Icon name="BoltIcon" size={18} className="text-accent" />
+                    <div className="w-8 h-8 rounded-xl bg-accent/20 border border-accent/20 flex items-center justify-center shrink-0">
+                      <Icon name="BuildingStorefrontIcon" size={16} className="text-accent" />
                     </div>
                     <div>
-                      <p className="text-white text-sm font-600">Available for Projects</p>
-                      <p className="text-white/40 text-xs">Response within 24 hours</p>
+                      <p className="text-white text-sm font-700 leading-none mb-1">Your Business Dashboard</p>
+                      <p className="text-white/40 text-xs">Everything in one place</p>
                     </div>
                   </div>
-                  <span className="text-xs font-700 text-emerald-400 bg-emerald-400/10 rounded-full px-3 py-1">Open</span>
+                  <span className="text-[11px] font-700 text-accent bg-accent/15 border border-accent/20 rounded-full px-3 py-1">Ready</span>
                 </div>
 
-                {/* Project list */}
-                <div className="rounded-2xl bg-white/[0.03] border border-white/10 overflow-hidden">
-                  <div className="px-4 py-2.5 border-b border-white/10">
-                    <p className="text-white/50 text-xs font-600 uppercase tracking-widest">Recent Deliveries</p>
+                {/* Feature rows */}
+                <div className="rounded-2xl border border-white/[0.07] bg-white/[0.02] overflow-hidden">
+                  <div className="px-4 py-2 border-b border-white/[0.06]">
+                    <p className="text-white/35 text-[10px] font-700 uppercase tracking-[0.18em]">Included Features</p>
                   </div>
-                  {recentProjects.map((p, i) => (
-                    <div key={p.name} className={`flex items-center justify-between px-4 py-3 ${i < recentProjects.length - 1 ? 'border-b border-white/[0.06]' : ''}`}>
-                      <div className="flex items-center gap-3">
-                        <div className="w-8 h-8 rounded-xl flex items-center justify-center" style={{ background: `${p.color}20` }}>
-                          <Icon name="CubeIcon" size={14} style={{ color: p.color }} />
+                  {featureRows.map((f, i) => (
+                    <div
+                      key={f.name}
+                      className={`flex items-center justify-between px-4 py-2 ${i < featureRows.length - 1 ? 'border-b border-white/[0.05]' : ''}`}>
+                      <div className="flex items-center gap-2.5">
+                        <div
+                          className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                          style={{ background: `${f.color}18` }}>
+                          <Icon name={f.icon as Parameters<typeof Icon>[0]['name']} size={13} style={{ color: f.color }} />
                         </div>
-                        <span className="text-white text-sm font-500">{p.name}</span>
+                        <span className="text-white/80 text-[13px] font-500">{f.name}</span>
                       </div>
                       <span
                         className="text-[11px] font-700 rounded-full px-2.5 py-0.5"
-                        style={{ color: p.color, background: `${p.color}18` }}>
-                        {p.status}
+                        style={{ color: f.color, background: `${f.color}15` }}>
+                        {f.status}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                {/* Metric cards */}
-                <div className="grid grid-cols-3 gap-3">
+                {/* Metric row */}
+                <div className="grid grid-cols-3 gap-2">
                   {[
-                    { label: 'Active Projects', value: '12', icon: 'RocketLaunchIcon', color: '#a78bfa' },
-                    { label: 'Delivery Rate', value: '98.5%', icon: 'CheckBadgeIcon', color: '#22c55e' },
-                    { label: 'Avg. Timeline', value: '6 wks', icon: 'ClockIcon', color: '#00D4FF' },
+                    { icon: 'RocketLaunchIcon', label: 'Quick Setup', val: 'Fast', color: '#a78bfa' },
+                    { icon: 'ShieldCheckIcon', label: 'Free Trial', val: '1 Month', color: '#22c55e' },
+                    { icon: 'PhoneIcon', label: 'Support', val: '24/7', color: '#00D4FF' },
                   ].map((m) => (
-                    <div key={m.label} className="rounded-2xl bg-white/[0.04] border border-white/10 px-3 py-3 text-center">
-                      <Icon name={m.icon as Parameters<typeof Icon>[0]['name']} size={20} className="mx-auto mb-1.5" style={{ color: m.color }} />
-                      <p className="text-white text-sm font-800">{m.value}</p>
-                      <p className="text-white/40 text-[10px] font-500 mt-0.5 leading-snug">{m.label}</p>
+                    <div
+                      key={m.label}
+                      className="rounded-xl bg-white/[0.03] border border-white/[0.08] px-2 py-2.5 text-center flex flex-col items-center gap-1">
+                      <div
+                        className="w-7 h-7 rounded-lg flex items-center justify-center"
+                        style={{ background: `${m.color}18` }}>
+                        <Icon name={m.icon as Parameters<typeof Icon>[0]['name']} size={13} style={{ color: m.color }} />
+                      </div>
+                      <p className="text-white text-xs font-800 leading-none">{m.val}</p>
+                      <p className="text-white/35 text-[10px] font-500 leading-tight">{m.label}</p>
                     </div>
                   ))}
                 </div>
 
-                {/* Tech stack */}
-                <div className="rounded-2xl bg-white/[0.03] border border-white/10 px-4 py-3">
-                  <p className="text-white/40 text-[10px] font-600 uppercase tracking-widest mb-2.5">Tech Stack</p>
-                  <div className="flex flex-wrap gap-2">
-                    {techStack.map((t) => (
-                      <span key={t} className="text-[11px] font-600 text-white/70 bg-white/[0.07] border border-white/10 rounded-lg px-2.5 py-1">
+                {/* Business types row */}
+                <div className="rounded-xl bg-white/[0.02] border border-white/[0.06] px-4 py-2.5">
+                  <p className="text-white/30 text-[10px] font-700 uppercase tracking-[0.18em] mb-2">Works For</p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {businessTypes.slice(0, 6).map((t) => (
+                      <span
+                        key={t}
+                        className="text-[11px] font-600 text-white/60 bg-white/[0.05] border border-white/[0.08] rounded-lg px-2.5 py-1">
                         {t}
                       </span>
                     ))}
                   </div>
                 </div>
 
-                {/* Trust row */}
+                {/* Bottom trust strip */}
                 <div className="flex items-center justify-between px-1">
-                  <div className="flex -space-x-2">
-                    {[
-                      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face',
-                      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=40&h=40&fit=crop&crop=face',
-                      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=40&h=40&fit=crop&crop=face',
-                    ].map((src, i) => (
-                      <div key={i} className="w-7 h-7 rounded-full border-2 border-[#0A0A2E] overflow-hidden">
-                        <AppImage src={src} alt="Client" width={28} height={28} className="object-cover" />
-                      </div>
-                    ))}
+                  <div className="flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-white/35 text-xs">Free demo • No commitment</span>
                   </div>
-                  <p className="text-white/40 text-xs">Trusted by <span className="text-white/70 font-600">80+ businesses</span></p>
+                  <div className="flex items-center gap-1">
+                    <Icon name="LockClosedIcon" size={11} className="text-white/25" />
+                    <span className="text-white/30 text-[11px]">Secure & Private</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -230,9 +274,9 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-white/25 text-[10px] font-600 uppercase tracking-widest">Scroll</span>
-        <div className="w-px h-8 bg-gradient-to-b from-white/30 to-transparent" />
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden md:flex flex-col items-center gap-2">
+        <span className="text-white/20 text-[10px] font-600 uppercase tracking-widest">Scroll</span>
+        <div className="w-px h-8 bg-gradient-to-b from-white/25 to-transparent" />
       </div>
     </section>
   );

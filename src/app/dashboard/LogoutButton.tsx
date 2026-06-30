@@ -31,8 +31,8 @@ export default function LogoutButton({ variant = 'dark', className = '' }: Logou
       disabled={isLoggingOut}
       className={`inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-700 transition disabled:cursor-not-allowed disabled:opacity-70 ${
         variant === 'light'
-          ? 'border border-border bg-white text-foreground shadow-sm hover:border-primary/35 hover:text-primary'
-          : 'border border-white/15 bg-white/[0.06] text-white hover:border-accent/45 hover:bg-white/[0.1]'
+          ? 'border border-border bg-white text-foreground shadow-sm hover:border-[#8F86C7] hover:text-primary'
+          : 'border border-[#3D367A] bg-[#17134A] text-white hover:border-[#00BEE5] hover:bg-[#211B64]'
       } ${className}`}
     >
       <Icon name="ArrowLeftOnRectangleIcon" size={17} className={variant === 'light' ? 'text-primary' : 'text-accent'} />

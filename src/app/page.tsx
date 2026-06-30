@@ -15,25 +15,25 @@ import SEOContentSection from '@/app/components/SEOContentSection';
 import { faqItems, siteConfig, siteUrl, targetKeywords } from '@/app/seo';
 
 export const metadata: Metadata = {
-  title: 'RNP Tech Solutions | Websites, Software, Dashboards & Business Automation',
+  title: 'RNP Tech Solutions | Professional Websites & Business Management Systems for Local Businesses',
   description:
-    'RNP Tech Solutions builds websites, custom software, dashboards, inventory/ERP systems, CRM solutions and business automation for growing businesses.',
+    'RNP Tech Solutions provides professional websites and business management systems for salons, schools, clinics, pharmacies, restaurants, gyms, and other local businesses. Affordable monthly plans, free demo available.',
   keywords: targetKeywords,
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'RNP Tech Solutions | Websites, Software, Dashboards & Business Automation',
+    title: 'RNP Tech Solutions | Professional Websites & Business Management Systems for Local Businesses',
     description:
-      'RNP Tech Solutions builds websites, custom software, dashboards, inventory/ERP systems, CRM solutions and business automation for growing businesses.',
+      'Professional websites and business management systems for salons, schools, clinics, pharmacies, and other local businesses. Affordable monthly plans, free demo available.',
     url: siteUrl,
     images: [siteConfig.ogImage],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'RNP Tech Solutions | Websites, Software, Dashboards & Business Automation',
+    title: 'RNP Tech Solutions | Professional Websites & Business Management Systems for Local Businesses',
     description:
-      'RNP Tech Solutions builds websites, custom software, dashboards, inventory/ERP systems, CRM solutions and business automation for growing businesses.',
+      'Professional websites and business management systems for salons, schools, clinics, pharmacies, and other local businesses. Affordable monthly plans, free demo available.',
     images: [siteConfig.ogImage],
   },
 };
@@ -44,7 +44,7 @@ export default function HomePage() {
     '@graph': [
       {
         '@type': 'WebPage',
-        name: 'RNP Tech Solutions - Software Development Company in Noida',
+        name: 'RNP Tech Solutions - Professional Websites and Business Management Systems for Local Businesses',
         url: siteUrl,
         description: siteConfig.shortDescription,
         isPartOf: {
@@ -53,13 +53,13 @@ export default function HomePage() {
           name: siteConfig.legalName,
         },
         about: [
-          'Software Development',
-          'Website Development',
-          'Inventory Management Software',
-          'ERP Development',
-          'CRM Development',
-          'Business Automation',
-          'Digital Transformation',
+          'Business Website Development',
+          'Business Management Software',
+          'Enquiry and Booking System',
+          'Role-Based Dashboards',
+          'Customer and Staff Management',
+          'Monthly Support and Maintenance',
+          'Local Business Digital Solutions',
         ],
       },
       {
