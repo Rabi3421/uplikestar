@@ -52,15 +52,15 @@ export const staticPages: StaticPageData[] = [
       {
         title: 'Who We Are',
         paragraphs: [
-          'RNP Tech Solutions is a digital solutions company serving local and small business owners across India. We work with salon owners, school managers, clinic operators, pharmacy owners, restaurant managers, gym owners, retail shop owners, travel agencies, real estate agencies, and other service-based businesses.',
-          'Our team understands that most local business owners are not looking for complicated software. They need a professional online presence, a way to receive and manage enquiries, and a simple system to handle daily operations without needing a technical background.',
+          'RNP Tech Solutions is a Noida-based technology company founded in 2018, serving local and small business owners across India. Based in Sector 63, Noida, Uttar Pradesh, we work with salon owners, school managers, clinic operators, pharmacy owners, restaurant managers, gym owners, retail shop owners, travel agencies, real estate agencies, and other service-based businesses throughout India.',
+          'Our team has spent years working directly with local business owners to understand their real operational challenges. We know that most local business owners are not looking for complicated software — they need a professional online presence, a way to receive and manage customer enquiries, and a simple system to handle daily operations without needing technical knowledge.',
         ],
       },
       {
         title: 'Why We Started',
         paragraphs: [
-          'Many local business owners struggle with basic challenges: no online presence, missed customer enquiries, manual record-keeping, poor customer communication, and no system to manage staff or bookings. These problems are common across salons, schools, clinics, pharmacies, and other service businesses.',
-          'RNP Tech Solutions was started to solve exactly these problems. We built a practical system that gives every local business a professional website, an enquiry management tool, and a simple business dashboard — without requiring technical knowledge or heavy investment.',
+          'When we started RNP Tech Solutions in 2018, we noticed a clear gap: local businesses across India — salons, clinics, schools, pharmacies — were losing customers every day simply because they had no online presence and no proper enquiry management system. Customers who searched for services online could not find them. Enquiries went unanswered. Appointments were missed.',
+          'We built RNP Tech Solutions to solve exactly these problems. Starting in Noida, we developed a practical system that gives every local business a professional website, an enquiry management tool, and a simple business dashboard — without requiring technical knowledge or heavy upfront investment. Since 2018, we have helped local businesses across India go digital on affordable monthly plans.',
         ],
       },
       {
@@ -128,7 +128,7 @@ export const staticPages: StaticPageData[] = [
     heroSubtitle:
       'This privacy policy explains what information we collect, how we use it, how we protect it, and your rights regarding the data you share with RNP Tech Solutions.',
     intro:
-      'RNP Tech Solutions is committed to protecting the privacy of every client and website visitor. This policy outlines how we collect, use, store, share, and protect information provided through our website, enquiry forms, service interactions, and business communications. By using our website or engaging with our services, you agree to the practices described in this policy.',
+      'Last Updated: June 2026. RNP Tech Solutions is committed to protecting the privacy of every client and website visitor. This policy outlines how we collect, use, store, share, and protect information provided through our website, enquiry forms, service interactions, and business communications. By using our website or engaging with our services, you agree to the practices described in this policy.',
     sections: [
       {
         title: 'Information We Collect',
@@ -214,7 +214,7 @@ export const staticPages: StaticPageData[] = [
     heroSubtitle:
       'These terms govern the use of our website and services, your subscription, payment obligations, and the relationship between you and RNP Tech Solutions.',
     intro:
-      'By accessing the RNP Tech Solutions website, submitting an enquiry, signing up for a free demo, or subscribing to any of our services, you agree to these terms and conditions. Please read them carefully. These terms apply to all clients, visitors, and users of our website and services.',
+      'Last Updated: June 2026. By accessing the RNP Tech Solutions website, submitting an enquiry, signing up for a free demo, or subscribing to any of our services, you agree to these terms and conditions. Please read them carefully. These terms apply to all clients, visitors, and users of our website and services.',
     sections: [
       {
         title: 'Acceptance of Terms',
@@ -318,49 +318,84 @@ export const staticPages: StaticPageData[] = [
   {
     slug: 'case-studies',
     path: '/case-studies',
-    title: 'Case Studies',
-    metaTitle: 'Case Studies | RNP Tech Solutions',
+    title: 'How We Work',
+    metaTitle: 'How RNP Tech Solutions Works | Local Business Digital Setup Process',
     metaDescription:
-      'Explore RNP Tech Solutions case studies showing how we have helped salons, schools, clinics, pharmacies, and other local businesses go online and manage operations digitally.',
-    eyebrow: 'Case Studies',
-    heroTitle: 'How RNP Tech Solutions Helps Local Businesses Go Digital',
+      'Learn how RNP Tech Solutions sets up professional websites and business management systems for salons, schools, clinics, and other local businesses across India — from demo to go-live.',
+    eyebrow: 'How We Work',
+    heroTitle: 'From Free Demo to a Live Business System — Here Is How It Works',
     heroSubtitle:
-      'Our work focuses on helping salon owners, school managers, clinic operators, and other local business owners build a professional online presence and manage daily operations more easily.',
+      'We make going digital simple for local businesses across India. Here is exactly what happens from your first conversation with us to your business going live online.',
     intro:
-      'RNP Tech Solutions works with local and small business owners who want to go online, receive more customer enquiries, and manage their business operations without complex software or heavy investment. Our case study approach highlights the types of problems we solve and the outcomes business owners typically experience.',
+      'RNP Tech Solutions follows a clear, straightforward process for every local business we work with — whether it is a salon in Noida, a school in Mumbai, a clinic in Delhi, or a pharmacy anywhere in India. We handle everything from setup to go-live so you never have to figure out the technical side yourself.',
     sections: [
       {
-        title: 'Salon and Beauty Businesses',
+        title: 'Step 1 — Free Demo Call',
         paragraphs: [
-          'Salon owners often struggle with managing appointments manually, missing customer calls, and having no professional online presence. We help them set up a salon website with a service menu, gallery, appointment enquiry form, WhatsApp booking button, and a simple dashboard to manage bookings and customer records.',
-          'The result is a professional salon that customers can find online, contact easily, and book appointments with — all without the owner needing any technical knowledge.',
-        ],
-      },
-      {
-        title: 'Schools and Coaching Centers',
-        paragraphs: [
-          'School and coaching center owners often rely on word-of-mouth and manual admission processes. We help them set up an educational website with admission enquiry forms, course information, notice sections, and dashboards for admin, teachers, students, and parents depending on the selected plan.',
-          'Parents and students can visit the website, submit admission enquiries, and stay updated — while school admins manage enquiries and records from a simple dashboard.',
-        ],
-      },
-      {
-        title: 'Clinics, Hospitals, and Healthcare',
-        paragraphs: [
-          'Clinic and hospital operators manage patient appointments, doctor schedules, and reception work manually. We help them set up a professional clinic or hospital website with doctor profiles, department pages, appointment request forms, and dashboards for reception staff, doctors, and management depending on the plan.',
+          'Every engagement starts with a free demo. We show you how your business website and management dashboard will look and work — customized for your business type. A salon owner sees a salon dashboard. A school manager sees a school management system. A clinic operator sees a patient and appointment management setup.',
+          'The demo is completely free and carries no commitment. You get to evaluate the system, ask questions, and decide if it fits your business before spending a single rupee.',
         ],
         bullets: [
-          'Professional clinic or hospital website with doctor profiles',
-          'Patient appointment request and enquiry system',
-          'Reception dashboard to manage patient records',
-          'Doctor and accountant dashboards depending on plan',
-          'WhatsApp contact and enquiry integration',
+          'Free demo available for all business types',
+          'No commitment or payment required for the demo',
+          'See your actual business category setup in action',
+          'Ask questions and get answers before deciding',
         ],
       },
       {
-        title: 'Pharmacies, Restaurants, Gyms, and Retail Shops',
+        title: 'Step 2 — Share Your Business Details',
         paragraphs: [
-          'Local businesses in categories like pharmacy, restaurant, gym, and retail shop benefit from having a professional website that builds customer trust, displays their services or products, and provides a way for customers to contact them online.',
-          'We set up business-specific websites and dashboards that match each category. A pharmacy gets a product and service information page with customer enquiry management. A restaurant gets a menu display, gallery, and table enquiry system. A gym gets a membership enquiry form, trainer profiles, and class details.',
+          'Once you decide to proceed, we collect the information we need to set up your system. This includes your business name, services and pricing, contact details, WhatsApp number, address, photos or images, staff names, and any other specific requirements for your business category.',
+          'We guide you through this process step by step. You do not need to prepare anything in a specific format — just share what you have and we organize it for you.',
+        ],
+        bullets: [
+          'Business name, logo, and branding details',
+          'Services or products with descriptions and pricing',
+          'Contact number, email, WhatsApp, and address',
+          'Photos, images, or other visual assets',
+          'Staff or team details if applicable to your plan',
+        ],
+      },
+      {
+        title: 'Step 3 — We Set Up Your System',
+        paragraphs: [
+          'Our team configures your professional website and management dashboard using the information you have provided. We set up your service pages, contact form, WhatsApp button, enquiry system, gallery, and all the sections relevant to your business type.',
+          'We also configure your management dashboard with your business profile, staff access, enquiry tracking, and any other modules included in your plan. Everything is set up specifically for your business — not a generic template.',
+        ],
+        bullets: [
+          'Professional website configured with your business details',
+          'Enquiry form, WhatsApp button, and contact integration',
+          'Business management dashboard configured for your category',
+          'Staff and role access set up based on your plan',
+          'Testing across devices and browsers before handover',
+        ],
+      },
+      {
+        title: 'Step 4 — Review and Go Live',
+        paragraphs: [
+          'Before going live, we share the complete setup with you for review. You can check every section, suggest changes, and request adjustments. Once you are satisfied, your business goes live online — ready to receive customer enquiries and be found on search engines.',
+          'We also provide a brief walkthrough so you and your team know how to use the dashboard from day one. Most business owners and staff are comfortable using the system within a day or two.',
+        ],
+      },
+      {
+        title: 'Step 5 — Ongoing Monthly Support',
+        paragraphs: [
+          'Your relationship with RNP Tech Solutions does not end at go-live. Monthly support is included with every active subscription. This covers technical maintenance, content updates, issue resolution, dashboard adjustments, and WhatsApp or email support access throughout your subscription.',
+          'We are your ongoing digital partner — not just a one-time service provider. If something needs updating, fixing, or improving, we are available to help.',
+        ],
+        bullets: [
+          'Monthly technical maintenance and health checks',
+          'Minor content updates included in your plan',
+          'WhatsApp and email support during business hours',
+          'Priority support available on the Complete Business Management Plan',
+        ],
+      },
+      {
+        title: 'What Business Owners Experience',
+        paragraphs: [
+          'Salon owners across India who set up with us typically start receiving online enquiries within the first week of going live. Before working with us, most were relying entirely on word-of-mouth and missing customers who searched for salons online.',
+          'School and coaching center operators find that having an admission enquiry form online significantly reduces the number of phone calls they need to handle manually during admission season. Parents submit enquiries online and admins manage them from the dashboard.',
+          'Clinic and hospital operators appreciate having all patient appointment requests in one place — no missed calls, no scattered WhatsApp messages, just a clean dashboard where every enquiry is tracked and actionable.',
         ],
       },
     ],
@@ -600,7 +635,7 @@ export const staticPages: StaticPageData[] = [
     heroSubtitle:
       'This policy explains our position on refunds, cancellations, and third-party charges for clients subscribed to RNP Tech Solutions services.',
     intro:
-      'RNP Tech Solutions is committed to delivering value through our website and business management system services. This refund and cancellation policy outlines the conditions under which refunds may or may not be applicable, how to cancel your subscription, and important notes regarding third-party service charges.',
+      'Last Updated: June 2026. RNP Tech Solutions is committed to delivering value through our website and business management system services. This refund and cancellation policy outlines the conditions under which refunds may or may not be applicable, how to cancel your subscription, and important notes regarding third-party service charges.',
     sections: [
       {
         title: 'Setup and Customization Charges',
@@ -664,7 +699,7 @@ export const staticPages: StaticPageData[] = [
     heroSubtitle:
       'This policy explains our billing cycle, payment due dates, grace period, and what happens when payment is delayed or missed.',
     intro:
-      'RNP Tech Solutions provides services on a monthly subscription basis. This payment policy outlines the billing schedule, payment expectations, grace period terms, and the consequences of delayed or missed payments. By subscribing to our services, you agree to this payment policy.',
+      'Last Updated: June 2026. RNP Tech Solutions provides services on a monthly subscription basis. This payment policy outlines the billing schedule, payment expectations, grace period terms, and the consequences of delayed or missed payments. By subscribing to our services, you agree to this payment policy.',
     sections: [
       {
         title: 'Monthly Payment Due Date',
@@ -732,7 +767,7 @@ export const staticPages: StaticPageData[] = [
     heroSubtitle:
       'This disclaimer explains the limitations of our services, what we are responsible for, and what falls outside the scope of our guarantees.',
     intro:
-      'RNP Tech Solutions provides professional websites, business management systems, and digital support services for local and small businesses. This disclaimer outlines the boundaries of our service responsibilities and the factors that are outside our control or guarantee.',
+      'Last Updated: June 2026. RNP Tech Solutions provides professional websites, business management systems, and digital support services for local and small businesses. This disclaimer outlines the boundaries of our service responsibilities and the factors that are outside our control or guarantee.',
     sections: [
       {
         title: 'Nature of Our Services',
@@ -810,7 +845,7 @@ export const staticPages: StaticPageData[] = [
     heroSubtitle:
       'This cookie policy explains what cookies are, how we use them on our website, and the choices you have regarding cookies.',
     intro:
-      'RNP Tech Solutions uses cookies and similar tracking technologies on our website to improve your browsing experience, understand how visitors interact with our site, and support service delivery. This cookie policy explains what cookies are, the types we use, and how you can manage your cookie preferences.',
+      'Last Updated: June 2026. RNP Tech Solutions uses cookies and similar tracking technologies on our website to improve your browsing experience, understand how visitors interact with our site, and support service delivery. This cookie policy explains what cookies are, the types we use, and how you can manage your cookie preferences.',
     sections: [
       {
         title: 'What Are Cookies',

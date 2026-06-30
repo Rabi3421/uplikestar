@@ -63,11 +63,22 @@ const pricingNotes = [
 export default function PricingPage() {
   const schema = {
     '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'Pricing — RNP Tech Solutions',
-    url: `${siteUrl}/pricing`,
-    description:
-      'Affordable monthly plans for local businesses. Professional website, dashboard, and management system starting at ₹3,000/month.',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        name: 'Pricing — RNP Tech Solutions',
+        url: `${siteUrl}/pricing`,
+        description:
+          'Affordable monthly plans for local businesses. Professional website, dashboard, and management system starting at ₹3,000/month.',
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: siteUrl },
+          { '@type': 'ListItem', position: 2, name: 'Pricing', item: `${siteUrl}/pricing` },
+        ],
+      },
+    ],
   };
 
   return (

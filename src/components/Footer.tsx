@@ -8,9 +8,9 @@ const serviceLinks = [
   { label: 'Business Website Setup', href: '/services/website-development' },
   { label: 'Business Management Software', href: '/services/custom-software-development' },
   { label: 'Enquiry & Booking System', href: '/services/business-automation' },
-  { label: 'Role-Based Dashboards', href: '/services/erp-crm-solutions' },
-  { label: 'Customer & Staff Management', href: '/services/inventory-management-systems' },
-  { label: 'Monthly Support & Maintenance', href: '/services/ecommerce-development' },
+  { label: 'Role-Based Dashboards', href: '/services/role-based-dashboards' },
+  { label: 'Customer & Staff Management', href: '/services/customer-staff-management' },
+  { label: 'Monthly Support & Maintenance', href: '/services/monthly-support-maintenance' },
 ];
 
 const companyLinks = [
@@ -181,6 +181,18 @@ export default function Footer() {
                   </div>
                 </a>
               ))}
+              {/* NAP address — visible for citation crawlers */}
+              <address className="not-italic flex items-start gap-3 rounded-2xl border border-border bg-card px-4 py-4 shadow-sm">
+                <div className="w-10 h-10 rounded-2xl bg-gradient-primary flex items-center justify-center shrink-0">
+                  <AppIcon name="MapPinIcon" size={18} className="text-white" />
+                </div>
+                <div>
+                  <p className="text-foreground text-sm font-700 mb-1">Office</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    A-142, Sector 63, Noida,<br />Uttar Pradesh 201301, India
+                  </p>
+                </div>
+              </address>
             </div>
           </div>
         </div>

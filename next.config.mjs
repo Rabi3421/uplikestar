@@ -14,6 +14,26 @@ const nextConfig = {
     remotePatterns: imageHosts,
     minimumCacheTTL: 60,
   },
+  async redirects() {
+    return [
+      // Service slug corrections — old URLs redirect permanently to new correct URLs
+      {
+        source: '/services/ecommerce-development',
+        destination: '/services/monthly-support-maintenance',
+        permanent: true,
+      },
+      {
+        source: '/services/inventory-management-systems',
+        destination: '/services/customer-staff-management',
+        permanent: true,
+      },
+      {
+        source: '/services/erp-crm-solutions',
+        destination: '/services/role-based-dashboards',
+        permanent: true,
+      },
+    ];
+  },
   webpack(
     config,
     {

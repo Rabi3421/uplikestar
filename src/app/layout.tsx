@@ -77,7 +77,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={plusJakartaSans.variable}>
+    <html lang="en-IN" className={plusJakartaSans.variable}>
       <body className={plusJakartaSans.className}>
         {children}
 

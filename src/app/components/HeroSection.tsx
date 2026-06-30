@@ -73,7 +73,7 @@ export default function HeroSection() {
 
             {/* Sub */}
             <p className="text-white/55 text-sm md:text-base leading-relaxed max-w-[540px] mb-5">
-              We set up your business website, enquiry system, and management dashboard — personalised for your business, live in days, on a simple monthly plan.
+              We set up your business website, enquiry system, and management dashboard — personalised for your business, live in days, on a simple monthly plan. Helping local businesses across India go digital.
             </p>
 
             {/* Business type chips */}

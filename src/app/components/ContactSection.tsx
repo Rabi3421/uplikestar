@@ -312,6 +312,20 @@ export default function ContactSection() {
               ))}
             </div>
 
+            {/* Google Maps embed */}
+            <div className="rounded-3xl overflow-hidden border border-border shadow-sm" style={{ minHeight: '180px' }}>
+              <iframe
+                title="RNP Tech Solutions office — A-142 Sector 63 Noida"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0!2d77.37695!3d28.62723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sA-142%2C+Sector+63%2C+Noida%2C+Uttar+Pradesh+201301!5e0!3m2!1sen!2sin!4v1625000000000!5m2!1sen!2sin"
+                width="100%"
+                height="180"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                aria-label="Map showing RNP Tech Solutions office location in Sector 63, Noida"
+              />
+            </div>
+
             {/* Dark promo card */}
             <div className="bg-gradient-hero rounded-3xl p-7 relative overflow-hidden flex-1">
               <div
