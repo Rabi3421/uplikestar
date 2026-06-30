@@ -74,7 +74,7 @@ The contact form now submits to `/api/contact`, which:
 
 ### Required environment variables
 
-Add these values to your `.env.local`:
+Add these values to your `.env`:
 
 ```bash
 GOOGLE_SHEETS_SPREADSHEET_ID=your_sheet_id_here
