@@ -2,14 +2,13 @@ import { MongoClient, type Db } from 'mongodb';
 
 import { getRequiredEnv } from './config';
 
-const uri = getRequiredEnv('MONGODB_URI');
-
 const globalForMongo = globalThis as unknown as {
   mongoClientPromise?: Promise<MongoClient>;
 };
 
 export function getMongoClient() {
   if (!globalForMongo.mongoClientPromise) {
+    const uri = getRequiredEnv('MONGODB_URI');
     const client = new MongoClient(uri, {
       connectTimeoutMS: 10000,
       serverSelectionTimeoutMS: 10000,
